@@ -1,9 +1,8 @@
 CS325_Final
 ===========
-
-<h1> Description </h1>
 Craigslist Rework for CS325 - Fall 2014. 
 
+<h1> Description </h1>
 For our final project in CS325 (Usability), we were tasked with improving upon the design of an exisiting website or piece of software, so to bestow it with a new and improved UI (along with some changes in core functionality, if need be) to vastly improve the UX.
 
 We decided to endeavor into Craigslist; a site desperately needing a new UI. This repo details our progress thus far. 
