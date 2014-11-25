@@ -3,16 +3,17 @@
 
 
 <style>
-<?php include '../bootstrap/css/bootstrap.min.css'; ?>
+<?php include '/bootstrap/css/bootstrap.min.css'; ?>
 </style> 
 
 <style>
-<?php include '../bootstrap/css/bootstrap.css'; ?>
+<?php include '/bootstrap/css/bootstrap.css'; ?>
 </style> 
 
 
 <head>
 <title>CraigsList</title>
 </head>
+<body>
 
 

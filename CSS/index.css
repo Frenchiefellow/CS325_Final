@@ -1,0 +1,28 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.dropHeaders{
+	text-align: center;
+}
+
+.mapBox {
+	width: 80%;
+	height: 410px;
+	margin: 0 auto;
+	border: 1px solid rgb(85, 26, 139);
+	position: relative;
+}
+
+.splashDrops {
+	width: 300px;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+.splashSelection{
+	width: 100%;
+	text-align: center;
+}
+
