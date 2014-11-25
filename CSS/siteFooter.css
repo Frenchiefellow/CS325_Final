@@ -1,0 +1,31 @@
+footer{
+	border-top: 2px solid #ddd;
+	height: 40px;
+	line-height: 0.7em;
+	background: #eee;
+	padding: 5px;
+	position: absolute;
+	width: calc( 100% - 40px );
+	bottom: 0;
+	left: 40px;
+	right: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+footer ul{
+	padding-top: 10px;
+}
+
+.botFooter{
+	text-align: center;
+}
+
+.botFooter li{
+	text-align: center;
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}

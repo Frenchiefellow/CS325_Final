@@ -1,0 +1,8 @@
+<div id="sidr" class="sidr left">
+  <!-- Your content -->
+  <ul>
+    <li><a href="#">List 1</a></li>
+    <li class="active"><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+  </ul>
+</div>
