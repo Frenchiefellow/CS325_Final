@@ -20,10 +20,6 @@
 	<!-- Country Selection Drop Down --> 
 	<div id="countriesList"></div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 	<!-- Region Selection Map --> 
 	<div id="map"></div>
 
