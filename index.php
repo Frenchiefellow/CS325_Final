@@ -5,11 +5,7 @@
 
 
 <!-- Jumbotron Splash Banner --> 
-<<<<<<< HEAD
 <div class="jumbotron" id= "splashBanner" style="background-color: rgba(18, 165, 244, .6); border-bottom: 2px solid #1094db;">
-=======
-<div class="jumbotron" id= "splashBanner" style="background-color: rgba(18, 165, 244, .6);">
->>>>>>> origin/master
 	<h1 class="dropHeaders" >CRAIGSLIST! </h1>
 </div>
 
@@ -24,11 +20,8 @@
 	<!-- Country Selection Drop Down --> 
 	<div id="countriesList"></div>
 
-<<<<<<< HEAD
+
 	<!-- Region Selection Map --> 
-=======
-	<!-- Region Selection Drop Down --> 
->>>>>>> origin/master
 	<div id="map"></div>
 
 </div> 
