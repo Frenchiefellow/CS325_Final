@@ -4,6 +4,7 @@
     <li><br></li>
     <li id="cat"><a onclick='loadNew( this.parentNode.id  , "categories" )' >My Categories</a></li>
     <li id="posts"><a onclick='loadNew( this.parentNode.id  , "posts" )'>My Posts</a></li>
+    <li id="searchPage"><a href="search.php">Search</a></li>
     <li><br></li>
     <li id="comm"><a onclick='loadNew( this.parentNode.id  , "community" )'>Community</a></li>
     <li id="housing"><a onclick='loadNew( this.parentNode.id  , "housing" )'>Housing</a></li>

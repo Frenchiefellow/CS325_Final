@@ -28,6 +28,6 @@
 </div>
 
 
-<script src="./scripts/home.js"></script>
+<script src="./scripts/search.js"></script>
 
 <?php include '/partials/footer.php'; ?> 

@@ -1,0 +1,26 @@
+#search{
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+ #subButton{
+ 	margin: 0;
+ 	background-color: rgba(41,184,229,1);
+ 	border: 1px solid #1094db;
+ 	padding: 2px 5px;
+ 	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	width: 30px;
+	color: white;
+ }
+
+#searchContent{
+	width: calc( 33.3% - 30px);
+	margin: 0;
+}
+
+#searchContent + #subButton{
+	border: 1px solid  #1094db;
+    border-left: 0px;
+}
