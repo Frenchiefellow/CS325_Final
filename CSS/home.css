@@ -10,10 +10,23 @@ body, html{
 	height: 40px;
 	width: calc( 100% - 40px);
 	position: absolute;
-	background-color: rgba(18, 165, 244, .6); 
-	border-bottom: 2px solid #1094db;
+	background: rgba(179,220,237,1);
+	background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+	background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -o-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: -ms-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+	border-bottom: 1px solid #1094db;
+	border-left: 2px solid #1094db;
 	left: 40px;
 	top: 0;
+}
+
+#calen{
+	height: calc( 100% - 30px);
+	width: 100%;
 }
 
 .locations{
@@ -26,6 +39,12 @@ body, html{
 	left: 40px;
 }
 
+.cat{
+	height: calc( ( 100% - 80px) / 3 );
+	border: 1px solid black;
+
+}
+
 .contentBody{
 	position: absolute;
 	width: calc( 100% - 40px); 
@@ -33,22 +52,69 @@ body, html{
 	top: 70px;
 	left: 40px;
 	padding-left: 5px;
+	padding-right: 5px;
 	margin: 0 auto;
 }
 
 .crumbHeader{
 	margin: 0 auto 0 5px;
 	padding-top: 5px;
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.innerLinks{
+	margin: 0 auto;
+	text-align: center;
+	height: 100%;
+	padding: 0;
+}
+
+.logoLink{
+	text-decoration: none;
+	color: black;
 }
 
 .logoLink a:link{
 	text-decoration: none;
-	background-color: black;
+	color: black;
 }
 
 .logoLink a:hover {
 	text-decoration: none;
 	background-color: black;
+}
+
+.outer{
+	position: relative;
+	padding: 0;
+	overflow: auto;
+	height: calc( 100% - 30px );
+}
+
+.rowHeader{
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	font-size: 125%;
+	padding-top: 3px;
+	border-bottom: 1px solid #edd;
+	background-color: #eee;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.spacer{
+	height: 15px;
+}
+
+.title{
+	position: relative;
+	text-align: center;
+	border: 1px solid #ccc;
+	clear: none;
+	padding: 5px 0px;
+	font-weight: bold;
+	background-color: #eee;
 
 }
 

@@ -5,8 +5,8 @@
 
 
 <!-- Jumbotron Splash Banner --> 
-<div class="jumbotron" id= "splashBanner" style="background-color: rgba(18, 165, 244, .6); border-bottom: 2px solid #1094db;">
-	<h1 class="dropHeaders" >CRAIGSLIST! </h1>
+<div class="jumbotron" id= "splashBanner">
+	<h1 class="bannerText" style="font-size: 900%"> &#9774; CRAIGSLIST! </h1>
 </div>
 
 

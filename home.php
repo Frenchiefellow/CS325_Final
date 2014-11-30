@@ -2,9 +2,10 @@
 
 <!-- CSS -->
 <style> <?php include '/CSS/home.css'; ?> </style>
-<style> <?php include '/sidr/stylesheets/jquery.sidr.dark.css'; ?> </style>
+<style> <?php include '/packages/calendar/css/style.css'; ?> </style>
+<style> <?php include 'packages/sidr/stylesheets/jquery.sidr.dark.css'; ?> </style>
 <!-- SCRIPTS --> 
-<script src="./sidr/jquery.sidr.min.js"></script> 
+<script src="./packages/sidr/jquery.sidr.min.js"></script> 
 
 
 
@@ -21,25 +22,10 @@
 <?php include '/partials/locationBar.php'; ?>
 
 <div class="contentBody">
-	<p class="vert" style="position: absolute; margin: 0 auto; left: 200px"> hello </p>       
+	     
 </div>
 
 
-<script>
-$(document).ready(function() {
-  $('#simple-menu').sidr();
-
-  $('#simple-menu').click( function( ){
-  	var pos = $(this).position()
-  	//alert( pos.left === 0);
-  	 if( pos.left === 0 ){
-  	 	$( '#expText' ).html(" &#8595; Click to Collapse Menu &#8595;");
-  	 }
-  	 else{
-  	 	$( '#expText' ).html(" &#8593; Click to Expand Menu &#8593;");
-  	 }
-  } );
-});
-</script>
+<script src="./scripts/home.js"></script>
 
 <?php include '/partials/footer.php'; ?> 
