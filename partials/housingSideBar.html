@@ -1,0 +1,63 @@
+<div class="sideBar">
+	<div class="sideHead">
+		<h4 style="text-align: center;"> Advanced </h4>
+	</div>
+
+	<div id="sear">
+		<form  method="GET" action="search.php" id="sBar">
+		<input type="type" id="scBar" name="search" placeholder="Search"><input id="subB" type="submit" value=">">
+		</form>
+	</div><br>
+
+	<form id="criteria">
+		<div class="sec">
+			<input type="checkbox" name="images" Value="images"> Has Image <br>
+			<input type="checkbox" name="pets" Value="pet"> Pet Friendly <br>
+			<input type="checkbox" name="smoke" Value="smoking"> Smoker Friendly <br>
+		</div>
+
+		<div class="sec"><br></div>
+
+		<div class="sec">
+			<div class="labels"> Types of Housing: </div>
+			<select id="typeHousing" class="typeHouses" name="typeHouses" style="width: 95%">
+				<option value ="select" selected="selected">...</option>
+				<option value="HO">House</option>
+				<option value="APT">Apartment</option>
+			</select><br>
+		</div>
+
+		<div class="sec"><br></div>
+
+		<div class="sec">
+			<span>Price:</span>
+			<input type="tel" name="minAsk" placeholder="min" title="whole number, no letters or symbols" value="" style="max-width:3em">
+			<input type="tel" name="maxAsk"  placeholder="max" title="whole number, no letters or symbols" value="" style="max-width:3em"><br>
+		</div>
+
+		<div class="sec"><br></div>
+
+		<div class="sec">
+			<span>Sq. Ft.</span>
+			<input type="tel" name="minFT"  placeholder="min" title="whole number, no letters or symbols" value="" style="max-width:3em">
+			<input type="tel" name="maxFT" class="flatinput max" placeholder="max" title="whole number, no letters or symbols" value="" style="max-width:3em"><br>
+		</div>
+
+		<div class="sec"><br></div>
+
+		<div class="sorts">
+			<div class="labels"> Sort By: </div>
+			<select id="sort" class="sorter" name="sorter" style="width: 95%">
+				<option value ="select" selected="selected">...</option>
+				<option value="date">Date (newest)</option>
+				<option value="max">Price (high to low)</option>
+				<option value="min">Price (low to high)</option>
+			</select>
+		</div>
+	</form>
+	
+</div>
+
+<script>
+
+</script>

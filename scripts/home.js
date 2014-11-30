@@ -25,7 +25,7 @@ function loadNew( Eid, pageName ){
 	//alert( ID );
 	var name = String( pageName ) + ".html";
 	//alert( name );
-	var path = './ContentPages/'
+	var path = './ContentPages/';
 	$( ".contentBody" ).load( path + name );
 
 	$( 'li' ).click( function ( event ){
@@ -33,5 +33,19 @@ function loadNew( Eid, pageName ){
 		$('li').removeClass( "active" );
 		$( ID ).addClass( "active" );
 	});
+}
 
+function loadFake( Eid, pageName ){
+	var ID = '#' + String( Eid );
+	var name = String( pageName ) + ".html";
+	var path = './ContentPages/FakeData/';
+
+	$( '.contentBody' ).load( path + name );
+	$( '.contentBody' ).attr("style", "padding-left: 0px");
+
+	$( 'a' ).click( function ( event ){
+		event.preventDefault();
+		$('li').removeClass( "active" );
+		$( ID ).addClass( "active" );
+	});
 }

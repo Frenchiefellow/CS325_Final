@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./CSS/housing.css" >
+<div class="houses">
+	<div class="titleHolder">
+		<h2 class='title'>Apts / Housing </h2>
+		<div id="sbar" style="display: inline-block; width: 80%; margin-left: 10%"></div> 
+		<p class="btn btn-warning" id="favorited" role="button">&starf; Favorited!</p>
+	</div>
+	<div id="bar"></div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+	$( '#bar' ).load( './partials/housingSideBar.html' );
+	$( '#sbar' ).load( './partials/searchBar.html' );
+});
+
+</script>
