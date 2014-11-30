@@ -7,6 +7,8 @@ For our final project in CS325 (Usability), we were tasked with improving upon t
 
 We decided to endeavor into Craigslist; a site desperately needing a new UI. This repo details our progress thus far. 
 
+<strong>NOTE:</strong> This "site" is meant to be a high fidelity prototype and will not contain most of the logic and functionality required to be the "full" Craigslist site. This project is meant to demonstrate how a new UI will improve the UX of the site. 
+
 <h1> Members </h1>
 <ul>
 <li><strong>Chris (Owner of repo):</strong> </li>
