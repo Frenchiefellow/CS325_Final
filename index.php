@@ -1,7 +1,7 @@
-<?php include '/partials/header.php'; ?> 
+<?php include './partials/header.php'; ?> 
 
 <!-- CSS -->
-<style> <?php include '/CSS/index.css'; ?> </style>
+<style> <?php include './CSS/index.css'; ?> </style>
 
 
 <!-- Jumbotron Splash Banner --> 
@@ -15,7 +15,7 @@
 
 	<!-- Continent Selection Drop Down --> 
 	<h4 class="dropHeaders" >1. Select Your Continent </h4>
-	<?php include '/partials/Lists/continentList.php'; ?>
+	<?php include './partials/Lists/continentList.php'; ?>
 
 	<!-- Country Selection Drop Down --> 
 	<div id="countriesList"></div>
@@ -29,4 +29,4 @@
 <script src="./scripts/index.js"></script> 
 
 
-<?php include '/partials/footer.php'; ?> 
+<?php include './partials/footer.php'; ?> 

@@ -1,3 +1,3 @@
-<?php include '/partials/siteFoot.php'; ?>
+<?php include './partials/siteFoot.php'; ?>
 </body>
 </html>

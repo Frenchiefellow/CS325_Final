@@ -11,7 +11,7 @@
 				'</footer>';
 		}
 		else{
-			echo '<footer style="left: 0">' .
+			echo '<footer style="left: 0; width: 100%">' .
 				'<ul class="botFooter">' .
 				'<li>&copy; 2014 Craigslist</li>' .
 				'<li><a href="/xampp/CS325/help.php">Help</a></li>' . 
