@@ -2,6 +2,7 @@
 
 <!-- CSS -->
 <style> <?php include '/CSS/home.css'; ?> </style>
+<style> <?php include '/CSS/location.css'; ?> </style>
 <style> <?php include '/CSS/search.css'; ?> </style>
 <style> <?php include '/packages/calendar/css/style.css'; ?> </style>
 <style> <?php include 'packages/sidr/stylesheets/jquery.sidr.dark.css'; ?> </style>

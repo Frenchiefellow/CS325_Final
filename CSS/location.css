@@ -1,0 +1,21 @@
+.loc{
+	position: relative;
+	display: inline-block;
+	left: 0;
+	text-align: center;
+	top: -2px;
+	border: 1px solid black;
+	padding: 1px;
+	background-color: #eee;
+}
+
+.add{
+	position: relative;
+	display: inline-block;
+	
+	text-align: center;
+	top: -2px;
+	border: 1px solid black;
+	padding: 1px;
+	background-color: #eee;
+}

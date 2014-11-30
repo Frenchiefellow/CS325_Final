@@ -1,6 +1,7 @@
 <div id="sidr" class="sidr left">
   <ul>
     <li id="home" class="active"><a onclick='loadNew( this.parentNode.id  , "home" )'>Craigslist Home</a></li>
+    <li id="locate"><a onclick='loadNew( this.parentNode.id  , "locations" )'>Change Locations</a></li>
     <li><br></li>
     <li id="cat"><a onclick='loadNew( this.parentNode.id  , "categories" )' >My Categories</a></li>
     <li id="posts"><a onclick='loadNew( this.parentNode.id  , "posts" )'>My Posts</a></li>

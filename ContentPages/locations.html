@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="CSS/index.css">
+<!-- Form Selection Box --> 
+<div class="splashSelection" style="margin-left: -125px;">
+	<div id="contentSpacer" style="height: 125px">
+		<h1 class="page-header">Change / Add Locations </h1>
+	</div>
+	<!-- Continent Selection Drop Down --> 
+	<h4 class="dropHeaders">1. Select Your Continent </h4>
+	<div id="first"></div>
+	<!-- Country Selection Drop Down --> 
+	<div id="countriesList"></div>
+
+	<!-- Region Selection Map --> 
+	<div id="map"></div>
+
+</div> 
+
+<!-- SCRIPTS --> 
+<script src="./scripts/index.js"></script> 
+<script>
+	$(document).ready(function() { 
+		$( '#first' ).load( './partials/lists/continentList.html' );
+	});
+</script>
