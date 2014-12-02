@@ -6,7 +6,7 @@
 
 <!-- Jumbotron Splash Banner --> 
 <div class="jumbotron" id= "splashBanner">
-	<h1 class="bannerText" style="font-size: 900%"> &#9774; CRAIGSLIST! </h1>
+	<h1 class="bannerText" style="font-size: 900%"> &#9774; CL! </h1>
 </div>
 
 

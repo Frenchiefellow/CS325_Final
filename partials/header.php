@@ -17,7 +17,7 @@
 <script src="http://underscorejs.org/underscore.js"></script>
 
 <head>
-<title>CraigsList</title>
+<title>CL</title>
 </head>
 <body>
 
