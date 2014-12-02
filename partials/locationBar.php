@@ -16,37 +16,39 @@ $(document).ready(function() {
 					'<sup style="cursor: pointer"> X</sup>'
 					'</a>';
 
+	
+
 	if( loc === 'czech' ){
 		var html = 'Prague' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'czech' );
 	}
-	if( loc === 'mass' ){
+	else if( loc === 'mass' ){
 		var html = 'Western Mass' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'mass' );
 	}
-	if( loc === 'okla' ){
+	else if( loc === 'okla' ){
 		var html = 'Tulsa' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'okla' );
 	}
-	if( loc === 'CZ' ){
+	else if( loc === 'CZ' ){
 		var html = 'Czech Republic' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'CZ' );
 	}
-	if( loc === 'USA' ){
+	else if( loc === 'USA' ){
 		var html = 'United States of America' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'USA' );
 	}
-	/*else if( loc !== undefined || loc !== null ){
+	else{
 		//alert( loc );
 		var html = loc + following;
 		$( '.loc' ).html( html );
 
-	}*/
+	}
 
 });
 

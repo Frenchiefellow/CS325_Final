@@ -7,5 +7,16 @@
 	<option value="Latin America">Latin America</option>
 	<option value="Oceania">Oceania</option>
 	<option value="US">United States of America</option>
-</select><br><br>
+</select>
+<a class="btn btn-primary" onclick='contGo( );'> GO </a>
+<br><br>
 
+<script> 
+function contGo( ){
+	var cont = $( '#countries :selected' ).text();
+	if( cont !== 'Select' ){
+		window.localStorage.setItem( 'loc', cont );
+		window.location.href = 'home.php';
+	}
+}
+</script>
