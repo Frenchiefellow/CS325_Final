@@ -8,7 +8,7 @@
     <li id="searchPage"><a href="search.php">Search</a></li>
     <li><br></li>
     <li id="comm"><a onclick='loadNew( this.parentNode.id  , "community" )'>Community</a></li>
-    <li id="housing"><a onclick='loadNew( this.parentNode.id  , "housing" )'>Housing</a></li>
+    <li id="housing"><a onclick='loadNew( this.parentNode.id  , "FakeData/housingResults" )'>Housing</a></li>
     <li id="jobs"><a onclick='loadNew( this.parentNode.id  , "jobs" )'>Jobs</a></li>
     <li id="pers"><a onclick='loadNew( this.parentNode.id  , "personals" )'>Personals</a></li>
     <li id="sale"><a onclick='loadNew( this.parentNode.id  , "sale" )'>For Sale</a></li>
