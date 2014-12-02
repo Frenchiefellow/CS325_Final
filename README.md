@@ -1,13 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
-	<TITLE></TITLE>
-	<META NAME="GENERATOR" CONTENT="OpenOffice 4.0.0  (Win32)">
-	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20141202;430621">
-</HEAD>
-<BODY LANG="en-US" DIR="LTR">
+
 <P>CS325_Final =========== Craigslist Rework for CS325 - Fall 2014.
 Temporarily Hosted: http://cs325final.comlu.net 
 </P>
