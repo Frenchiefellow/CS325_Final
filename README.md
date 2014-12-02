@@ -1,5 +1,7 @@
 
-<P>CS325_Final =========== Craigslist Rework for CS325 - Fall 2014.
+CS325_Final 
+=========== 
+<P>Craigslist Rework for CS325 - Fall 2014.
 Temporarily Hosted: http://cs325final.comlu.net 
 </P>
 <H1>Description 
