@@ -39,12 +39,23 @@ function countryAppear( name ){
 }
 
 function mapAppear ( name ){
-		switch( name ){
-			case 'Select' :
-	  			$( '#map' ).load( './partials/mapBox.html' );
-	  			break;
-	  			
-			default :
+		switch( name ){  			
+			case 'MA' :
 				$( '#map' ).load( './partials/mapBox.html' );
+				break;
+
+			case 'CR' :
+				$( '#map' ).load( './partials/mapBox.html' );
+				break;
+
+			case 'OK' :
+				$( '#map' ).load( './partials/mapBox.html' );
+				break;
+
+			default :
+				$( '#map' ).html( "" );
 		}
+
+
+	window.localStorage.setItem( 'location', name );
 }

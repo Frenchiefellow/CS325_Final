@@ -1,1 +1,25 @@
-<p style="position: absolute; margin: 0 auto;"> events </p>  
+
+<p id="day"></p>
+
+<script>
+var day = window.localStorage.getItem( 'day' );
+//alert( day );
+window.localStorage.clear();
+
+$(document).ready(function() {
+	if( day != undefined || day != null ){
+		$( '#day' ).html( day );
+		//alert( "true" );
+	}
+	else{
+		day = 'ZERO';
+		$( '#day' ).html( day );
+	}
+
+	if( $( '.popup' ) !== undefined ){
+		document.getElementById( 'test' ).remove();
+    	$( '.contentBody').removeAttr("style");
+	}
+
+});
+</script>

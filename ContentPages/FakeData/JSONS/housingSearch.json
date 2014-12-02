@@ -1,0 +1,110 @@
+{ 
+	"Results" : [
+		{
+			"title" : "Spacious Apartment",
+			"location" : "Amherst",
+			"price" : "600",
+			"date" : "11/24",
+			"beds" : "1",
+			"bath" : "1",
+			"feet" : "650",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "Spacious Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
+			"phone" : "5551256985",
+			"email" : "timallen@christmaswiththekranks.com",
+			"name"  : "Tim Allen"
+		},
+
+		{
+			"title" : "Apartment",
+			"location" : "Amherst",
+			"price" : "450",
+			"date" : "11/17",
+			"beds" : "1",
+			"bath" : "1",
+			"feet" : "400",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
+			"phone" : "Do not contact",
+			"email" : "billbricks@christmaswiththekranks.com",
+			"name"  : "Bill Bricks"
+		},
+
+		{
+			"title" : "New Apartment",
+			"location" : "Amherst",
+			"price" : "525",
+			"date" : "12/1",
+			"beds" : "1",
+			"bath" : "1",
+			"feet" : "500",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "New Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
+			"phone" : "1234567890",
+			"email" : "joeybonzo@christmaswiththekranks.com",
+			"name"  : "Joey Bonzo"
+		},
+
+		{
+			"title" : "Small Apartment",
+			"location" : "Hadley",
+			"price" : "600",
+			"date" : "11/24",
+			"beds" : "1",
+			"bath" : "1",
+			"feet" : "650",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "Small Apartment - Hadley. One Bath/One Bedroom. Read to move in.",
+			"phone" : "9785550123",
+			"email" : "dyronetonk@christmaswiththekranks.com",
+			"name"  : "Dyrone Tonk"
+		},
+
+		{
+			"title" : "Apartment",
+			"location" : "Northampton",
+			"price" : "850",
+			"date" : "11/24",
+			"beds" : "2",
+			"bath" : "2",
+			"feet" : "800",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "Apartment - Northampton. One Bath/One Bedroom. Read to move in.",
+			"phone" : "18005556740",
+			"email" : "dunk@christmaswiththekranks.com",
+			"name"  : "Jason Gastrow"
+		},
+
+		{
+			"title" : "Apartment",
+			"location" : "Sunderland",
+			"price" : "200",
+			"date" : "11/27",
+			"beds" : "1",
+			"bath" : "1",
+			"feet" : "200",
+			"outerImg" : "./resources/images/apt/1.jpg",
+			"img1" : "./resources/images/apt/2.jpg",
+			"img2" : "./resources/images/apt/3.jpg",
+			"img3" : "./resources/images/apt/4.jpg",
+			"desc" : "Sunderland Apartment. One Bath/One Bedroom. Read to move in.",
+			"phone" : "Do not contact",
+			"email" : "steinfeld@christmaswiththekranks.com",
+			"name"  : "Steinfeld"
+		}]
+}

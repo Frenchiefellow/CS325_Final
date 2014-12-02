@@ -1,18 +1,76 @@
 <link rel="stylesheet" href="./CSS/housing.css" >
+<link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
+
 <div class="houses">
 	<div class="titleHolder">
-		<h2 class='title'>Apts / Housing </h2>
+		<div style="height: 20px;"></div>
+		<div class='title'>Apts / Housing </div>
+		<div style="height: 10px;"></div>
 		<div id="sbar" style="display: inline-block; width: 80%; margin-left: 10%"></div> 
 		<p class="btn btn-warning" id="favorited" role="button">&starf; Favorited!</p>
 	</div>
 	<div id="bar"></div>
+	<div class="content" id='content'></div>
 </div>
 
 <script>
 
 $(document).ready(function() {
+
 	$( '#bar' ).load( './partials/housingSideBar.html' );
 	$( '#sbar' ).load( './partials/searchBar.html' );
+
+	var jsonData;
+	$.ajax({
+		type : "GET",
+        url: "./ContentPages/FakeData/JSONS/housingSearch.JSON",
+        dataType:"json",
+        contentType:"application/json",
+        error: function( e ){
+        	alert( "Error Loading Results." );
+        },
+        success: function(response) {
+            jsonData = response;
+            console.dir( jsonData );
+            loadResults( jsonData );
+        }
+    });
+
+	
 });
 
+function loadResults( JSONs ){
+	var html = "";
+	for( var i = 0; i < JSONs[ "Results" ].length; i++ ){
+		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
+		html += '<a href="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" style="height: 100px; width: 100px;"></a>';
+		html += '<div class="price">$'  + JSONs[ "Results" ][ i ][ 'price' ] + '/month</div></div>';
+		html += '<div class="infoBox">';
+		html += '<h4><strong><a>' + JSONs[ "Results" ][ i ][ "title" ] + ' - ' + JSONs[ "Results" ][ i ][ "location" ] + '</a></strong></h4>';
+		html += '<h5><strong> Bedrooms: </strong>' +  JSONs[ "Results" ][ i ][ "beds" ] + '</h5>';
+		html += '<h5><strong> Bathrooms: </strong>' +  JSONs[ "Results" ][ i ][ "bath" ] + '</h5>';
+		html += '<h5><strong> Sq. Ft.: </strong>' +  JSONs[ "Results" ][ i ][ "feet" ] + 'ft<sup>2</sup></h5>';
+		var diff = dateDiff( JSONs, i );
+		html += '<h5><strong> Date Posted: </strong>' +  JSONs[ "Results" ][ i ][ "date" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
+		html += '</div></div></div>';
+	}
+	$( '#content' ).html( html );
+
+}
+
+function dateDiff( JSONs, i )
+{
+	var today = new Date( );
+	var splitter = JSONs[ "Results" ][ i ][ "date" ].split( "/" ); 
+	var two = new Date( today.getFullYear( ), splitter[ 0 ] - 1, splitter[ 1 ] );
+
+	var millisecondsPerDay = 1000 * 60 * 60 * 24;
+    var millisBetween = two.getTime( ) - today.getTime( );
+    var days = millisBetween / millisecondsPerDay;
+    var result = Math.floor( Math.abs( days ) );
+
+    return result;
+}
+
 </script>
+<script src="./packages/lightbox/js/lightbox.min.js"></script>

@@ -49,3 +49,65 @@ function loadFake( Eid, pageName ){
 		$( ID ).addClass( "active" );
 	});
 }
+
+function loadEvents( day ){
+	var path = './ContentPages/events.html';
+	window.localStorage.setItem( 'day', day );
+
+	$( '.contentBody' ).load( path );
+
+	$( 'a' ).click( function ( event ){
+		event.preventDefault();
+		$('li').removeClass( "active" );
+		$( '#events' ).addClass( "active" );
+	});
+
+}
+
+function popUp( day ){
+
+	var css = "opacity: 0.1;"
+	$( '.contentBody').attr("style", css);
+	
+    var popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.id = 'test';
+    var cancel = document.createElement('div');
+    cancel.className = 'cancel';
+    cancel.innerHTML = 'X';
+    cancel.onclick = function (e) {
+    	 popup.parentNode.removeChild( popup );
+    	 $( '.contentBody').removeAttr("style");
+    };
+    var message = document.createElement('h5');
+    message.innerHTML = "Events for December " + day + ":";
+    message.className = 'eventTitle';
+
+    var event1 = document.createElement('a');
+    event1.innerHTML = "Event 1 <br>";
+    event1.onclick = function (){
+    	loadEvents( day );
+    };
+    event1.className = 'events';
+
+    var event2 = document.createElement('a');
+    event2.innerHTML = "Event 2 <br>";
+    event2.onclick = function (){
+    	loadEvents( day );
+    };
+    event2.className = 'events';
+
+    var event3 = document.createElement('a');
+    event3.innerHTML = "Event 3 <br>";
+    event3.onclick = function (){
+    	loadEvents( day );
+    };
+    event3.className = 'events';
+
+    popup.appendChild(message);                                    
+    popup.appendChild(cancel);
+    popup.appendChild(event1);
+    popup.appendChild(event2);
+    popup.appendChild(event3);
+    document.body.appendChild(popup);
+}

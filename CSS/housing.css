@@ -9,7 +9,7 @@
 .titleHolder{
 	position: relative;
 	width: 100%;
-	height: 11%;
+	height: 15%;
 	border-bottom: 1px solid black;
 }
 
@@ -45,8 +45,8 @@
 }
 
 #scBar{
-	width: 79%;
-	margin-left: 5px;
+	width: 80%;
+	margin-left: 3px;
 }
 
 #subB{
@@ -63,5 +63,60 @@
 	position: relative;
 	display: inline-block;
 	width: 100px;
-	
+}
+
+.content{
+	position: relative;
+	left: 150px;
+	width: calc( 100% - 150px );
+	overflow: auto;
+	height: 85%;
+
+}
+
+.result{
+	position: relative;
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid black;
+	margin: 0 auto;
+}
+.innerResult{
+	/*text-align: center;*/
+	margin: 0 auto;
+	position: relative;
+	width: 90%;
+	height: 150px;
+}
+
+.pics{
+	position: relative;
+	display: block;
+	top: 15px;
+}
+.title{
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.price{
+	font-weight: bold;
+	font-size: 125%;
+	position: relative;
+	margin-top: 15px;
+}
+
+.picbox{
+	height: 150px;
+	width: 125px;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.infoBox{
+	position: absolute;
+	display: inline-block;
+	margin: 0 auto;
+	height: 150px;
+	width: calc( 100% - 125px );
 }

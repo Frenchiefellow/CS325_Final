@@ -1,10 +1,40 @@
 <!-- MAPBOX -->
 <h4 class="dropHeaders" >3. Select Your Region(s) </h4>
 <div class="mapBox">
-	<img src="./resources/images/mass.gif" usemap="#massMap" style="height: 100%; width: inherit;">
+	<img usemap="#massMap" id="mapImg" style="height: 100%; width: inherit;">
 	<map name="massMap">
 		<!-- Map over Worcester --> 
-		<area shape="circle" coords="550, 150, 75" href="home.php" />
+		<area class="clicker" shape="circle" coords="550, 150, 75" onclick='locale( this.id )' style="cursor: pointer;" />
 	</map>
 </div>
 
+<script>
+$(document).ready(function() { 
+ 	var location = window.localStorage.getItem( 'location' );
+ 	window.localStorage.clear( );
+
+ 	if( location === 'MA' ){
+ 		$( '#mapImg' ).attr( 'src', './resources/images/mass.gif' );
+ 		$( '.clicker' ).attr( 'id', 'mass' );
+ 	}
+ 	else if ( location === 'CR' ){
+ 		$( '#mapImg' ).attr( 'src', './resources/images/czech.jpg' );
+ 		$( '.clicker' ).attr( 'id', 'czech' );
+ 	}
+ 	else if ( location === 'OK' ){
+ 		$( '#mapImg' ).attr( 'src', './resources/images/ok.svg' );
+ 		$( '.clicker' ).attr( 'id', 'okla' );
+ 	}
+ 	else{
+ 		$( '#mapImg').removeAttr( 'src' );
+ 		$( '.clicker' ).removeAttr( 'id' );
+ 	}
+
+ });
+
+function locale( id ){
+	var url = 'home.php';
+	window.localStorage.setItem( 'loc', id );
+	window.location.href = url; 
+}
+</script>
