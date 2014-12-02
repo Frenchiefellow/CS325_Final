@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="./CSS/housing.css" >
+<div class="houses">
+    <div class="titleHolder">
+        <div style="height: 20px;"></div>
+        <div class='title'>Religion Forums</div>
+        <div style="height: 10px;"></div>
+        <div id="sbar" style="display: inline-block; width: 80%; margin-left: 10%"></div> 
+        <p class="btn btn-warning" id="favorited" role="button">&starf; Favorited!</p>
+    </div>
+    <div id="bar"></div>
+    <div class="content" id='content'></div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+
+	$( '#bar' ).load( './partials/forumsSideBar.html' );
+	$( '#sbar' ).load( './partials/searchBar.html' );
+
+	var jsonData;
+	$.ajax({
+		type : "GET",
+        url: "./ContentPages/FakeData/JSONS/forumLists.JSON",
+        dataType:"json",
+        contentType:"application/json",
+        error: function( e ){
+        	alert( "Error Loading Results." );
+        },
+        success: function(response) {
+            jsonData = response;
+            console.dir( jsonData );
+            loadResults( jsonData );
+        }
+    });
+
+	
+});
+
+function loadResults( JSONs ){
+	var html = "";
+	for( var i = 0; i < JSONs[ "Forums" ].length; i++ ){
+        var votes = JSONs[ "Forums" ][ i ][ "votes" ];
+        var picURL = '';
+        if( votes >= 0) 
+            picURL = './resources/images/up.png';
+        else
+            picURL = './resources/images/down.png';
+
+		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
+        html += '<a data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + picURL + '" style="height: 100px; width: 100px;"></a>';
+        html += '<div class="votes">Votes: '  + JSONs[ "Forums" ][ i ][ 'votes' ] + '</div></div>';
+        html += '<div class="infoBox">';
+        html += '<h4><strong><a>' + JSONs[ "Forums" ][ i ][ "title" ] + '</a></strong></h4>';
+        html += '<h5><strong> Comments: </strong>' +  JSONs[ "Forums" ][ i ][ "comments" ] + '</h5>';
+        html += '<h5><strong> Author: </strong>' +  JSONs[ "Forums" ][ i ][ "author" ] + '</h5>';
+       ;
+        var diff = dateDiff( JSONs, i );
+        html += '<h5><strong> Date Posted: </strong>' + JSONs[ "Forums" ][ i ][ "month" ] + '/' + JSONs[ "Forums" ][ i ][ "day" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
+        html += '</div></div></div>';
+	}
+	$( '#content' ).html( html );
+
+}
+
+function dateDiff( JSONs, i )
+{
+	var today = new Date( );
+	var two = new Date( today.getFullYear( ), JSONs[ "Forums" ][ i ][ "month" ] - 1, JSONs[ "Forums" ][ i ][ "day" ] );
+   // alert( today + " " + two);
+	var millisecondsPerDay = 1000 * 60 * 60 * 24;
+    var millisBetween = two.getTime( ) - today.getTime( );
+    var days = millisBetween / millisecondsPerDay;
+    var result = Math.floor( Math.abs( days ) );
+
+    return result;
+}
+
+</script>

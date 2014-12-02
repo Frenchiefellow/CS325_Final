@@ -25,7 +25,12 @@ function loadNew( Eid, pageName ){
 	//alert( ID );
 	var name = String( pageName ) + ".html";
 	//alert( name );
-	var path = './ContentPages/';
+  var path;
+  if( pageName !== "forumsList")
+	 path = './ContentPages/';
+  else
+    path = './ContentPages/FakeData/';
+
 	$( ".contentBody" ).load( path + name );
 
 	$( 'li' ).click( function ( event ){

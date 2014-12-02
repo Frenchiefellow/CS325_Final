@@ -16,7 +16,7 @@
     <li id="gigs"><a onclick='loadNew( this.parentNode.id  , "gigs" )'>Gigs</a></li>
     <li id="resumes"><a onclick='loadNew( this.parentNode.id  , "resumes" )'>Resumes</a></li>
     <li><br></li>
-    <li id="forums"><a onclick='loadNew( this.parentNode.id  , "forums" )'>Forums</a></li>
+    <li id="forums"><a onclick='loadNew( this.parentNode.id  , "forumsList" )'>Forums</a></li>
     <li id="events"><a onclick='loadNew( this.parentNode.id  , "events" )'>Events</a></li>
     <li><br></li>
     <li id="acct" style="position: absolute; bottom: 0; width: 100%"><a onclick='loadNew( this.parentNode.id  , "account" )'>My Account</a></li>

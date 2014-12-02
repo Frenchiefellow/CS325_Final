@@ -1,0 +1,65 @@
+{
+	"Forums" : [
+		{ 
+			"title" : "Christian Mega-Thread",
+			"comments" : "5520",
+			"author" : "Judy",
+			"day" : "1",
+			"month" : "12",
+			"votes" : "7689"
+		},
+
+		{ 
+			"title" : "Dome of the Rock",
+			"comments" : "430",
+			"author" : "George Lomenzo",
+			"day" : "1",
+			"month" : "12",
+			"votes" : "300"
+		},
+
+
+		{		
+			"title" : "What is wrong with being in a cult?",
+			"comments" : "12",
+			"author" : "Jim Jones",
+			"day" : "1",
+			"month" : "12",
+			"votes" : "7"
+		},
+
+		{		
+			"title" : "Why should I go to church?",
+			"comments" : "53",
+			"author" : "1337h4ck3r",
+			"day" : "28",
+			"month" : "11",
+			"votes" : "25"
+		},
+
+		{		
+			"title" : "What is Satanism about?",
+			"comments" : "267",
+			"author" : "Bunga",
+			"day" : "27",
+			"month" : "11",
+			"votes" : "411"
+		},
+
+		{		
+			"title" : "Atheism is where its at!",
+			"comments" : "2",
+			"author" : "420BLAZEIT",
+			"day" : "27",
+			"month" : "11",
+			"votes" : "-653"
+		},
+		{		
+			"title" : "I hate religion! Convince me I'm wrong!",
+			"comments" : "10257",
+			"author" : "Barbra Baldino",
+			"day" : "13",
+			"month" : "11",
+			"votes" : "8890"
+		}]
+}

@@ -27,6 +27,10 @@
 	position: absolute;
 	bottom: 5%;
 }
+.sorts2{
+	position: absolute;
+	margin-left: 7px;
+}
 
 .labels{
 	position: relative;
@@ -104,6 +108,21 @@
 	font-size: 125%;
 	position: relative;
 	margin-top: 15px;
+}
+
+.votes{
+	font-weight: bold;
+	font-size: 125%;
+	position: relative;
+	margin-top: 15px;
+	text-align: center;
+}
+.attend{
+	font-weight: bold;
+	font-size: 105%;
+	position: relative;
+	margin-top: 15px;
+	
 }
 
 .picbox{

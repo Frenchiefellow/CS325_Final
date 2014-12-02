@@ -19,27 +19,34 @@ $(document).ready(function() {
 	if( loc === 'czech' ){
 		var html = 'Prague' + following;
 		$( '.loc' ).html( html );
+		window.localStorage.setItem( 'loc', 'czech' );
 	}
 	if( loc === 'mass' ){
 		var html = 'Western Mass' + following;
 		$( '.loc' ).html( html );
+		window.localStorage.setItem( 'loc', 'mass' );
 	}
 	if( loc === 'okla' ){
 		var html = 'Tulsa' + following;
 		$( '.loc' ).html( html );
+		window.localStorage.setItem( 'loc', 'okla' );
 	}
 	if( loc === 'CZ' ){
 		var html = 'Czech Republic' + following;
 		$( '.loc' ).html( html );
+		window.localStorage.setItem( 'loc', 'CZ' );
 	}
 	if( loc === 'USA' ){
 		var html = 'United States of America' + following;
 		$( '.loc' ).html( html );
+		window.localStorage.setItem( 'loc', 'USA' );
 	}
-	else if( loc !== undefined || loc !== null ){
+	/*else if( loc !== undefined || loc !== null ){
+		//alert( loc );
 		var html = loc + following;
 		$( '.loc' ).html( html );
-	}
+
+	}*/
 
 });
 
@@ -51,17 +58,17 @@ function contSearch(  ){
 	var loc = window.localStorage.getItem( 'loc' );
 	
 	if( loc === 'czech' ){
-		var html = 'Czech' + following;
+		var html = 'Czech Repbulic' + following;
 		window.localStorage.setItem( 'loc', 'CZ' )
 		$( '.loc' ).html( html );
 	}
 	if( loc === 'mass' ){
-		var html = 'USA' + following;
+		var html = 'United States of America' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'USA' );
 	}
 	if( loc === 'okla' ){
-		var html = 'USA' + following;
+		var html = 'United States of America' + following;
 		$( '.loc' ).html( html );
 		window.localStorage.setItem( 'loc', 'USA' );
 	}

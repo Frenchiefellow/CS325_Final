@@ -45,8 +45,76 @@
 	<div class="row cat">
 		<div class="rowHeader">Forums</div>
 		<div class="col-md-12 outer"> 
-			<div class="col-md-6 innerLinks" style="border-right: 1px solid black;"></div>
-				<a onclick="loadFake( 'forums', 'forumsList' )"> Apts / Housing </a>
+			<div class="col-md-6 innerLinks scroll" style="border-right: 1px solid black;">
+				<a>Apple</a><br>
+				<a>Arts</a><br>
+				<a>Atheist</a><br>
+				<a>Automotives</a><br>
+				<a>Beauty</a><br>
+				<a>Bikes</a><br>
+				<a>Celebritiess</a><br>
+				<a>Computers</a><br>
+				<a>Craft</a><br>
+				<a>Diet(s)</a><br>
+				<a>Divorce</a><br>
+				<a>Dying<a><br>
+				<a>Education</a><br>
+				<a>Feedback</a><br>
+				<a>Film</a><br>
+				<a>Fitness</a><br>
+				<a>Fixit</a><br>
+				<a>Food</a><br>
+				<a>Frugal</a><br>
+				<a>Gaming</a><br>
+				<a>Gardening</a><br>
+				<a>Haiku</a><br>
+				<a>Help</a><br>
+				<a>History</a><br>
+				<a>Housing</a><br>
+				<a>Jobs</a><br>
+				<a>Jokes</a><br>
+				<a>Kink</a><br>
+				<a>Legal</a><br>
+				<a>Linux</a><br>
+				<a>m4m</a><br>
+				<a>Manners</a><br>
+				<a>Marriage</a><br>
+				<a>Media</a><br>
+				<a>Money</a><br>
+				<a>Motorcycles</a><br>
+				<a>Music</a><br>
+			</div>
+			<div class="col-md-6 innerLinks scrollInner">
+				<a>Non-Profit</a><br>
+				<a>Open</a><br>
+				<a>Outdoors</a><br>
+				<a>Over 50</a><br>
+				<a>Parenting</a><br>
+				<a>Pets</a><br>
+				<a>Philosophy</a><br>
+				<a>Photography</a><br>
+				<a>P.O.C.</a><br>
+				<a>Politics</a><br>
+				<a>Psychic</a><br>
+				<a>Queer</a><br>
+				<a>Recovery</a><br>
+				<a onclick='loadFake( "forums", "religionForum")'>Religion</a><br>
+				<a>Romance</a><br>
+				<a>Science</a><br>
+				<a>Spirituality</a><br>
+				<a>Sports</a><br>
+				<a>Tax</a><br>
+				<a>Travel</a><br>
+				<a>TV</a><br>
+				<a>Vegan</a><br>
+				<a>w4w</a><br>
+				<a>Weddings</a><br>
+				<a>Wine</a><br>
+				<a>Women</a><br>
+				<a>Words</a><br>
+				<a>Writing</a><br>
+				<a>Yoga</a><br>
+			</div>
 		</div>
 	</div>
 </div>
@@ -71,6 +139,10 @@
 				$( document ).ready( function( ) {
 					$( '#calen' ).load( './packages/calendar/index.html' );
 					$( '.spacer' ).load( './partials/searchBar.html' );
+					var hei = 'height: ' + ($( '.innerLinks' )[ 0 ].scrollHeight * 1.65) + '%; '; 
+					var style = hei  +  'border-right: 1px solid black;';
+					$( '.scroll' ).attr('style', style );
+					$( '.scrollInner' ).attr('style', hei );
 				});
 			</script>
 		</div>

@@ -118,3 +118,11 @@ body, html{
 
 }
 
+.forumsList{
+	width: 99%;
+	text-align: center;
+	height: 85%;
+	overflow: auto;
+	position: relative;
+	left: 10px;
+}

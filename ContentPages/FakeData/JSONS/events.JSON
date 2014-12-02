@@ -1,0 +1,94 @@
+{
+	"Events" : [
+		{ 
+			"title" : "Hike Mt. SugarLoaf",
+			"location" : "Amherst",
+			"comments" : "55",
+			"attend" : "37",
+			"author" : "Hike Master",
+			"pDay" : "1",
+			"pMonth" : "12",
+			"eDay" : "15",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+		{ 
+			"title" : "Carpool to Holyoke Mall",
+			"location" : "UMass Amherst",
+			"comments" : "17",
+			"attend" : "7",
+			"author" : "Carpool Boy",
+			"pDay" : "1",
+			"pMonth" : "12",
+			"eDay" : "15",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+
+		{		
+			"title" : "CL Meetup Day",
+			"location" : "Boston",
+			"comments" : "17000",
+			"attend" : "5381",
+			"author" : "CLAdmin_Frenchiefellow",
+			"pDay" : "25",
+			"pMonth" : "11",
+			"eDay" : "15",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+		{		
+			"title" : "Christmas Day Observed",
+			"location" : "Worldwide",
+			"comments" : "N/A",
+			"attend" : "N/A",
+			"author" : "CLAdmin_Frenchiefellow",
+			"pDay" : "1",
+			"pMonth" : "1",
+			"eDay" : "25",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+		{		
+			"title" : "CL Community Gift Swap",
+			"location" : "San Francisco",
+			"comments" : "42058",
+			"attend" : "40216",
+			"author" : "CLAdmin_Frenchiefellow",
+			"pDay" : "25",
+			"pMonth" : "10",
+			"eDay" : "25",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+		{		
+			"title" : "New Years Eve Observed",
+			"location" : "Worldwide",
+			"comments" : "N/A",
+			"attend" : "N/A",
+			"author" : "CLAdmin_Frenchiefellow",
+			"pDay" : "1",
+			"pMonth" : "1",
+			"eDay" : "31",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		},
+
+		{		
+			"title" : "New Years Day Observed",
+			"location" : "Worldwide",
+			"comments" : "N/A",
+			"attend" : "N/A",
+			"author" : "CLAdmin_Frenchiefellow",
+			"pDay" : "1",
+			"pMonth" : "1",
+			"eDay" : "31",
+			"eMonth" : "12",
+			"img" : "./resources/images/events.jpg"
+		}]
+}

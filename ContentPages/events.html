@@ -1,4 +1,92 @@
+<link rel="stylesheet" href="./CSS/housing.css" >
+<link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
 
+<div class="houses">
+	<div class="titleHolder">
+		<div style="height: 20px;"></div>
+		<div class='title'>Events </div>
+		<div style="height: 10px;"></div>
+		<div id="sbar" style="display: inline-block; width: 80%; margin-left: 10%"></div> 
+		<p class="btn btn-warning" id="favorited" role="button">&starf; Favorited!</p>
+	</div>
+	<div id="bar"></div>
+	<div class="content" id='content'></div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+
+	$( '#bar' ).load( './partials/ForumsSideBar.html' );
+	$( '#sbar' ).load( './partials/searchBar.html' );
+
+	var jsonData;
+	$.ajax({
+		type : "GET",
+        url: "./ContentPages/FakeData/JSONS/events.JSON",
+        dataType:"json",
+        contentType:"application/json",
+        error: function( e ){
+        	alert( "Error Loading Results." );
+        },
+        success: function(response) {
+            jsonData = response;
+            console.dir( jsonData );
+            loadResults( jsonData );
+        }
+    });
+
+	
+});
+
+function loadResults( JSONs ){
+	var html = "";
+	for( var i = 0; i < JSONs[ "Events" ].length; i++ ){
+		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
+		html += '<a href="' + JSONs[ "Events" ][ i ][ 'img' ] + '" data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + JSONs[ "Events" ][ i ][ 'img' ] + '" style="height: 100px; width: 100px;"></a>';
+		html += '<div class="attend">Attending: '  + JSONs[ "Events" ][ i ][ 'attend' ] + '</div></div>';
+		html += '<div class="infoBox">';
+		html += '<h4><strong><a>' + JSONs[ "Events" ][ i ][ "title" ] + ' - ' + JSONs[ "Events" ][ i ][ "location" ] + '</a></strong></h4>';
+		html += '<h5><strong> Author: </strong>' +  JSONs[ "Events" ][ i ][ "author" ] + '</h5>';
+		html += '<h5><strong> Comments: </strong>' +  JSONs[ "Events" ][ i ][ "comments" ] + '</h5>';
+		var coming =  dateDiff( JSONs, i, 'til' );
+		html += '<h5><strong> Event Date: </strong>' +  JSONs[ "Events" ][ i ][ "eMonth" ] + '/' + JSONs[ "Events" ][ i ][ "eDay" ] +  ' &ensp; [' + coming + ' Days Til] </h5>';
+		var diff = dateDiff( JSONs, i, 'normal' );
+		html += '<h5><strong> Date Posted: </strong>' +  JSONs[ "Events" ][ i ][ "pMonth" ] + '/' + JSONs[ "Events" ][ i ][ "pDay" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
+		html += '</div></div></div>';
+	}
+	$( '#content' ).html( html );
+
+}
+
+function dateDiff( JSONs, i, type )
+{
+	if( type === 'normal' ){
+		var today = new Date( );
+		var two = new Date( today.getFullYear( ), JSONs[ "Events" ][ i ][ "pMonth" ] - 1, JSONs[ "Events" ][ i ][ "pDay" ] );
+
+		var millisecondsPerDay = 1000 * 60 * 60 * 24;
+	    var millisBetween = two.getTime( ) - today.getTime( );
+	    var days = millisBetween / millisecondsPerDay;
+	    var result = Math.floor( Math.abs( days ) );
+
+	    return result;
+	}
+	else{
+		var today = new Date( );
+		var two = new Date( today.getFullYear( ), JSONs[ "Events" ][ i ][ "eMonth" ] - 1, JSONs[ "Events" ][ i ][ "eDay" ] );
+
+		var millisecondsPerDay = 1000 * 60 * 60 * 24;
+	    var millisBetween = today.getTime( ) - two.getTime( );
+	    var days = millisBetween / millisecondsPerDay;
+	    var result = Math.floor( Math.abs( days ) );
+
+	    return result;
+	}
+}
+
+</script>
+<script src="./packages/lightbox/js/lightbox.min.js"></script>
 <p id="day"></p>
 
 <script>
