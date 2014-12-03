@@ -12,7 +12,7 @@ software, so to bestow it with a new and improved UI (along with some
 changes in core functionality, if need be) to vastly improve the UX.
 We decided to endeavor into Craigslist; a site desperately needing a
 new UI. This repo details our progress thus far. 
-
+<br>
 <STRONG>NOTE:</STRONG>
 This &quot;site&quot; is meant to be a high fidelity prototype and
 will not contain most of the logic and functionality required to be
