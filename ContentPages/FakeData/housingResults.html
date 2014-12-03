@@ -17,6 +17,8 @@
 
 $(document).ready(function() {
 
+	$( '.lightbox').remove();
+	$( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/housingSideBar.html' );
 	$( '#sbar' ).load( './partials/searchBar.html' );
 
@@ -43,7 +45,7 @@ function loadResults( JSONs ){
 	var html = "";
 	for( var i = 0; i < JSONs[ "Results" ].length; i++ ){
 		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
-		html += '<a href="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" style="height: 100px; width: 100px;"></a>';
+		html += '<a href="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" data-lightbox="image-' + i + '" style="height: 100px; width: 100px;"><img class="pics" src="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" style="height: 100px; width: 100px;"></a>';
 		html += '<div class="price">$'  + JSONs[ "Results" ][ i ][ 'price' ] + '/month</div></div>';
 		html += '<div class="infoBox">';
 		html += '<h4><strong><a>' + JSONs[ "Results" ][ i ][ "title" ] + ' - ' + JSONs[ "Results" ][ i ][ "location" ] + '</a></strong></h4>';

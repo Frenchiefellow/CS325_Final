@@ -43,7 +43,11 @@ function loadNew( Eid, pageName ){
 function loadFake( Eid, pageName ){
 	var ID = '#' + String( Eid );
 	var name = String( pageName ) + ".html";
-	var path = './ContentPages/FakeData/';
+  var path;
+  if( pageName !== 'events' )
+	 path = './ContentPages/FakeData/';
+  else
+    path = './ContentPages/';
 
 	$( '.contentBody' ).load( path + name );
 	$( '.contentBody' ).attr("style", "padding-left: 0px");

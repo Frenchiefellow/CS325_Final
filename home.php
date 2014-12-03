@@ -24,7 +24,7 @@
 <?php include './partials/mainHeader.php'; ?> 
 <?php include './partials/locationBar.php'; ?>
 
-<div class="contentBody">
+<div class="contentBody" style="overflow: auto;">
 	     
 </div>
 

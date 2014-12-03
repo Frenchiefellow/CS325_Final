@@ -17,6 +17,8 @@
 
 $(document).ready(function() {
 
+	$( '.lightbox').remove();
+	$( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/forumsSideBar.html' );
 	$( '#sbar' ).load( './partials/searchBar.html' );
 
@@ -43,7 +45,7 @@ function loadResults( JSONs ){
 	var html = "";
 	for( var i = 0; i < JSONs[ "Events" ].length; i++ ){
 		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
-		html += '<a href="' + JSONs[ "Events" ][ i ][ 'img' ] + '" data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + JSONs[ "Events" ][ i ][ 'img' ] + '" style="height: 100px; width: 100px;"></a>';
+		html += '<a href="' + JSONs[ "Events" ][ i ][ 'img' ] + '" data-lightbox="image-' + i + '" style="height: 100px; width: 100px;"><img class="pics" src="' + JSONs[ "Events" ][ i ][ 'img' ] + '" style="height: 100px; width: 100px;"></a>';
 		html += '<div class="attend">Attending: '  + JSONs[ "Events" ][ i ][ 'attend' ] + '</div></div>';
 		html += '<div class="infoBox">';
 		html += '<h4><strong><a>' + JSONs[ "Events" ][ i ][ "title" ] + ' - ' + JSONs[ "Events" ][ i ][ "location" ] + '</a></strong></h4>';
