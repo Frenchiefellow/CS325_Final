@@ -11,7 +11,9 @@ improving upon the design of an exisiting website or piece of
 software, so to bestow it with a new and improved UI (along with some
 changes in core functionality, if need be) to vastly improve the UX.
 We decided to endeavor into Craigslist; a site desperately needing a
-new UI. This repo details our progress thus far. <STRONG>NOTE:</STRONG>
+new UI. This repo details our progress thus far. 
+
+<STRONG>NOTE:</STRONG>
 This &quot;site&quot; is meant to be a high fidelity prototype and
 will not contain most of the logic and functionality required to be
 the &quot;full&quot; Craigslist site. This project is meant to
@@ -20,7 +22,7 @@ demonstrate how a new UI will improve the UX of the site.
 <H1>Members 
 </H1>
 <UL>
-	<LI><P><STRONG>Chris (Owner of repo):</STRONG> 
+	<LI><P><STRONG>Chris (Owner of repo): Frontend</STRONG> 
 	</P>
 	<LI><P><STRONG>Ben:</STRONG> 
 	</P>
