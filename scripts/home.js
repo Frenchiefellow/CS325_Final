@@ -120,3 +120,21 @@ function popUp( day ){
     popup.appendChild(event3);
     document.body.appendChild(popup);
 }
+
+function loadBread( name, args ){
+   $( '.breadSpacer' ).html( );
+  if( args !== null ){
+   // alert("true");
+    var subName = String( args ).toLowerCase( );
+    //alert( subName );
+    
+    html = "> " + "<a id='loaf' style='text-decoration: none; color: black; cursor: pointer;'";
+    var funct ='onclick="loadNew( \'' + subName + '\' , \'' +  (subName + "List" ) + '\' )" style="cursor: pointer;"';
+    html += funct + "> " + args + "</a> > " + name; 
+    //alert( html );
+  }
+  else{
+     html = "> "  + name;
+  }
+  $( '.breadSpacer' ).html( html );
+}

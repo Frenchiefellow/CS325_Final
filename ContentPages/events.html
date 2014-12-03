@@ -17,6 +17,7 @@
 
 $(document).ready(function() {
 
+	loadBread( 'Events', null );
 	$( '.lightbox').remove();
 	$( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/forumsSideBar.html' );
@@ -89,7 +90,7 @@ function dateDiff( JSONs, i, type )
 
 </script>
 <script src="./packages/lightbox/js/lightbox.min.js"></script>
-<p id="day"></p>
+<!-- <p id="day"></p>
 
 <script>
 var day = window.localStorage.getItem( 'day' );
@@ -112,4 +113,4 @@ $(document).ready(function() {
 	}
 
 });
-</script>
+</script> -->
