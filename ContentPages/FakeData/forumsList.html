@@ -1,143 +1,161 @@
-<h1 class="title" >Forum Topics</h1>
-<div class="spacer"></div>
-<div class="forumsList">
-	<div class="a">
-		<h3 class="page-header">A</h3>
-		<a>Apple</a><br>
-		<a>Arts</a><br>
-		<a>Atheist</a><br>
-		<a>Automotives</a><br>
+<link href='./CSS/housing.css' rel="stylesheet" />
+
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl">Forum Topics</span>
+		<div style="height: 5%"></div>
 	</div>
-	<div class="a">
-		<h3 class="page-header">B</h3>
-		<a>Beauty</a><br>
-		<a>Bikes</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">C</h3>
-		<a>Celebritiess</a><br>
-		<a>Computers</a><br>
-		<a>Craft</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">D</h3>
-		<a>Diet(s)</a><br>
-		<a>Divorce</a><br>
-		<a>Dying<a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">E</h3>
-		<a>Education</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">F</h3>
-		<a>Feedback</a><br>
-		<a>Film</a><br>
-		<a>Fitness</a><br>
-		<a>Fixit</a><br>
-		<a>Food</a><br>
-		<a>Frugal</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">G</h3>
-		<a>Gaming</a><br>
-		<a>Gardening</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">H</h3>
-		<a>Haiku</a><br>
-		<a>Help</a><br>
-		<a>History</a><br>
-		<a>Housing</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">J</h3>
-		<a>Jobs</a><br>
-		<a>Jokes</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">K</h3>
-		<a>Kink</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">L</h3>
-		<a>Legal</a><br>
-		<a>Linux</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">M</h3>
-		<a>m4m</a><br>
-		<a>Manners</a><br>
-		<a>Marriage</a><br>
-		<a>Media</a><br>
-		<a>Money</a><br>
-		<a>Motorcycles</a><br>
-		<a>Music</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">N</h3>
-		<a>Non-Profit</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">O</h3>
-		<a>Open</a><br>
-		<a>Outdoors</a><br>
-		<a>Over 50</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">P</h3>
-		<a>Parenting</a><br>
-		<a>Pets</a><br>
-		<a>Philosophy</a><br>
-		<a>Photography</a><br>
-		<a>P.O.C.</a><br>
-		<a>Politics</a><br>
-		<a>Psychic</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">Q</h3>
-		<a>Queer</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">R</h3>
-		<a>Recovery</a><br>
-		<a onclick='loadFake( "forums", "religionForum")'>Religion</a><br>
-		<a>Romance</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">S</h3>
-		<a>Science</a><br>
-		<a>Spirituality</a><br>
-		<a>Sports</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">T</h3>
-		<a>Tax</a><br>
-		<a>Travel</a><br>
-		<a>TV</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">V</h3>
-		<a>Vegan</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">W</h3>
-		<a>w4w</a><br>
-		<a>Weddings</a><br>
-		<a>Wine</a><br>
-		<a>Women</a><br>
-		<a>Words</a><br>
-		<a>Writing</a><br>
-	</div>
-	<div class="a">
-		<h3 class="page-header">Y</h3>
-		<a>Yoga</a><br>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
+		<form id="search" method="GET" action="search.php">
+			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
+			 <a class="btn-warning" id="favorited" role="button">&starf; Favorited!</a>
+  		</form>
+  	</div>
+  	<div style="height: 10%; border-bottom: 1px solid black;"></div>
+</div>
+<div class="contentContainer" style="height: 85%; width: 100%; position: relative; overflow: auto;">
+	<div class="forumsList" style="text-align: center">
+		<div class="a">
+			<h3 class="page-header">A</h3>
+			<a>Apple</a><br>
+			<a>Arts</a><br>
+			<a>Atheist</a><br>
+			<a>Automotives</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">B</h3>
+			<a>Beauty</a><br>
+			<a>Bikes</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">C</h3>
+			<a>Celebritiess</a><br>
+			<a>Computers</a><br>
+			<a>Craft</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">D</h3>
+			<a>Diet(s)</a><br>
+			<a>Divorce</a><br>
+			<a>Dying<a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">E</h3>
+			<a>Education</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">F</h3>
+			<a>Feedback</a><br>
+			<a>Film</a><br>
+			<a>Fitness</a><br>
+			<a>Fixit</a><br>
+			<a>Food</a><br>
+			<a>Frugal</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">G</h3>
+			<a>Gaming</a><br>
+			<a>Gardening</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">H</h3>
+			<a>Haiku</a><br>
+			<a>Help</a><br>
+			<a>History</a><br>
+			<a>Housing</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">J</h3>
+			<a>Jobs</a><br>
+			<a>Jokes</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">K</h3>
+			<a>Kink</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">L</h3>
+			<a>Legal</a><br>
+			<a>Linux</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">M</h3>
+			<a>m4m</a><br>
+			<a>Manners</a><br>
+			<a>Marriage</a><br>
+			<a>Media</a><br>
+			<a>Money</a><br>
+			<a>Motorcycles</a><br>
+			<a>Music</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">N</h3>
+			<a>Non-Profit</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">O</h3>
+			<a>Open</a><br>
+			<a>Outdoors</a><br>
+			<a>Over 50</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">P</h3>
+			<a>Parenting</a><br>
+			<a>Pets</a><br>
+			<a>Philosophy</a><br>
+			<a>Photography</a><br>
+			<a>P.O.C.</a><br>
+			<a>Politics</a><br>
+			<a>Psychic</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">Q</h3>
+			<a>Queer</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">R</h3>
+			<a>Recovery</a><br>
+			<a onclick='loadFake( "forums", "religionForum")'>Religion</a><br>
+			<a>Romance</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">S</h3>
+			<a>Science</a><br>
+			<a>Spirituality</a><br>
+			<a>Sports</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">T</h3>
+			<a>Tax</a><br>
+			<a>Travel</a><br>
+			<a>TV</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">V</h3>
+			<a>Vegan</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">W</h3>
+			<a>w4w</a><br>
+			<a>Weddings</a><br>
+			<a>Wine</a><br>
+			<a>Women</a><br>
+			<a>Words</a><br>
+			<a>Writing</a><br>
+		</div>
+		<div class="a">
+			<h3 class="page-header">Y</h3>
+			<a>Yoga</a><br>
+		</div>
 	</div>
 </div>
 
 <script>
 $( document ).ready( function( ) {
 	loadBread( 'Forums',  null ); 
-	$( '.spacer' ).load( './partials/searchBar.html' );
+	//$( '.spacer' ).load( './partials/searchBar.html' );
 });
 </script>
