@@ -1,12 +1,19 @@
-<div class="headerContents" style="height: 12%; width: 100%">
-	<h1 class="title">CL Home</h1>
-	<div class="spacer">
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl">CL Home</span>
+		<div style="height: 5%"></div>
+	</div>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
 		<form id="search" method="GET" action="search.php">
 			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
   		</form>
   	</div>
+  	<div style="height: 10%"></div>
 </div>
-<div class="contentContainer" style="height: 85%; width: 100%">
+<div class="contentContainer" style="height: 80%; width: 100%: position: relative">
 	<div class="col-md-4" style="height: 100%;">
 		<div class="row cat">
 			<div class="rowHeader">Community</div>
@@ -231,8 +238,9 @@
 			<div id="calen">
 				<script>
 					$( document ).ready( function( ) {
+						$( '.breadSpacer' ).html( "");
 						$( '#calen' ).load( './packages/calendar/index.html' );
-						$( '.spacer' ).load( './partials/searchBar.html' );
+						//$( '.spacer' ).load( './partials/searchBar.html' );
 						var hei = 'height: ' + ($( '.innerLinks' )[ 0 ].scrollHeight * 1.90) + '%; '; 
 						var style = hei  +  'border-right: 1px solid black;';
 						$( '.scroll' ).attr('style', style );
@@ -243,6 +251,7 @@
 		</div>
 	</div>
 </div>
+<div style="height: 5%"></div>
 
 
 

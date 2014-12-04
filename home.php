@@ -28,7 +28,6 @@
 	     
 </div>
 
-
 <script src="./scripts/home.js"></script>
 
 <?php include './partials/footer.php'; ?> 

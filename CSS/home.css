@@ -40,7 +40,7 @@ body, html{
 }
 
 .cat{
-	height: calc( ( 100% - 80px) / 3 );
+	height: calc( 100% / 3 );
 	border: 1px solid black;
 
 }
@@ -111,6 +111,11 @@ body, html{
 	margin: 0 auto;
 }
 
+.sidrIn{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 
 
 .title{
@@ -118,9 +123,22 @@ body, html{
 	text-align: center;
 	border: 1px solid #ccc;
 	clear: none;
-	padding: 5px 0px;
 	font-weight: bold;
 	background-color: #eee;
+	font-size: 1.75vw;
+	height: 40%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#ttl{
+	position: relative;
+ 	width: 75%;
+ 	display: block;
+ 	margin: 0 auto;
+ 	height: 90%;
+}
+
 
 }
 

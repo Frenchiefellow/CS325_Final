@@ -1,14 +1,23 @@
 <link rel="stylesheet" href="./CSS/housing.css" >
 <link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
 
-<div class="houses">
-	<div class="titleHolder">
-		<div style="height: 20px;"></div>
-		<div class='title'>Apts / Housing </div>
-		<div style="height: 10px;"></div>
-		<div id="sbar" style="display: inline-block; width: 80%; margin-left: 10%"></div> 
-		<p class="btn btn-warning" id="favorited" role="button">&starf; Favorited!</p>
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl">Apt / Housing</span>
+		<div style="height: 5%"></div>
 	</div>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
+		<form id="search" method="GET" action="search.php">
+			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
+			 <a class="btn-warning" id="favorited" role="button">&starf; Favorited!</a>
+  		</form>
+  	</div>
+  	<div style="height: 10%; border-bottom: 1px solid black;"></div>
+</div>
+<div class="contentContainer" style="height: 85%; width: 100%: position: relative">
 	<div id="bar"></div>
 	<div class="content" id='content'></div>
 </div>

@@ -67,14 +67,17 @@
 	position: relative;
 	display: inline-block;
 	width: 100px;
+	float: right;
+	
 }
+
 
 .content{
 	position: relative;
 	left: 150px;
 	width: calc( 100% - 150px );
 	overflow: auto;
-	height: 85%;
+	height: 100%;
 
 }
 
