@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="./CSS/housing.css" >
-<div class="houses">
-   <link rel="stylesheet" href="./CSS/housing.css" >
 <link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
 
 <div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
@@ -20,11 +18,13 @@
     </div>
     <div style="height: 10%; border-bottom: 1px solid black;"></div>
 </div>
+
+
 <div class="contentContainer" style="height: 85%; width: 100%: position: relative">
     <div id="bar"></div>
     <div class="content" id='content'></div>
 </div>
-</div>
+
 
 <script>
 
@@ -34,7 +34,6 @@ $(document).ready(function() {
     $( '.lightbox').remove();
     $( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/forumsSideBar.html' );
-	$( '#sbar' ).load( './partials/searchBar.html' );
 
 	var jsonData;
 	$.ajax({
@@ -59,6 +58,7 @@ function loadResults( JSONs ){
 	var html = "";
 	for( var i = 0; i < JSONs[ "Forums" ].length; i++ ){
         var votes = JSONs[ "Forums" ][ i ][ "votes" ];
+
         var picURL = '';
         if( votes >= 0) 
             picURL = './resources/images/up.png';
@@ -74,9 +74,11 @@ function loadResults( JSONs ){
         html += '<h5><strong> Author: </strong>' +  JSONs[ "Forums" ][ i ][ "author" ] + '</h5>';
        ;
         var diff = dateDiff( JSONs, i );
+
         html += '<h5><strong> Date Posted: </strong>' + JSONs[ "Forums" ][ i ][ "month" ] + '/' + JSONs[ "Forums" ][ i ][ "day" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
         html += '</div></div></div>';
 	}
+
 	$( '#content' ).html( html );
 
 }
@@ -85,7 +87,7 @@ function dateDiff( JSONs, i )
 {
 	var today = new Date( );
 	var two = new Date( today.getFullYear( ), JSONs[ "Forums" ][ i ][ "month" ] - 1, JSONs[ "Forums" ][ i ][ "day" ] );
-   // alert( today + " " + two);
+  
 	var millisecondsPerDay = 1000 * 60 * 60 * 24;
     var millisBetween = two.getTime( ) - today.getTime( );
     var days = millisBetween / millisecondsPerDay;

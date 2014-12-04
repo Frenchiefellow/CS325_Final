@@ -18,6 +18,7 @@
   	</div>
   	<div style="height: 10%; border-bottom: 1px solid black;"></div>
 </div>
+
 <div class="contentContainer" style="height: 85%; width: 100%: position: relative">
 	<div id="bar"></div>
 	<div class="content" id='content'></div>
@@ -32,7 +33,6 @@ $(document).ready(function() {
 	$( '.lightbox').remove();
 	$( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/forumsSideBar.html' );
-	$( '#sbar' ).load( './partials/searchBar.html' );
 
 	var jsonData;
 	$.ajax({
@@ -63,9 +63,13 @@ function loadResults( JSONs ){
 		html += '<h4><strong><a>' + JSONs[ "Events" ][ i ][ "title" ] + ' - ' + JSONs[ "Events" ][ i ][ "location" ] + '</a></strong></h4>';
 		html += '<h5><strong> Author: </strong>' +  JSONs[ "Events" ][ i ][ "author" ] + '</h5>';
 		html += '<h5><strong> Comments: </strong>' +  JSONs[ "Events" ][ i ][ "comments" ] + '</h5>';
+
 		var coming =  dateDiff( JSONs, i, 'til' );
+
 		html += '<h5><strong> Event Date: </strong>' +  JSONs[ "Events" ][ i ][ "eMonth" ] + '/' + JSONs[ "Events" ][ i ][ "eDay" ] +  ' &ensp; [' + coming + ' Days Til] </h5>';
+
 		var diff = dateDiff( JSONs, i, 'normal' );
+
 		html += '<h5><strong> Date Posted: </strong>' +  JSONs[ "Events" ][ i ][ "pMonth" ] + '/' + JSONs[ "Events" ][ i ][ "pDay" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
 		html += '</div></div></div>';
 	}
@@ -75,53 +79,23 @@ function loadResults( JSONs ){
 
 function dateDiff( JSONs, i, type )
 {
-	if( type === 'normal' ){
+	
 		var today = new Date( );
 		var two = new Date( today.getFullYear( ), JSONs[ "Events" ][ i ][ "pMonth" ] - 1, JSONs[ "Events" ][ i ][ "pDay" ] );
 
 		var millisecondsPerDay = 1000 * 60 * 60 * 24;
-	    var millisBetween = two.getTime( ) - today.getTime( );
+		var millisBetween 
+
+		if( type === 'normal' )
+	    	millisBetween = two.getTime( ) - today.getTime( );
+	    else
+	    	 millisBetween = today.getTime( ) - two.getTime( );
+
 	    var days = millisBetween / millisecondsPerDay;
 	    var result = Math.floor( Math.abs( days ) );
 
 	    return result;
-	}
-	else{
-		var today = new Date( );
-		var two = new Date( today.getFullYear( ), JSONs[ "Events" ][ i ][ "eMonth" ] - 1, JSONs[ "Events" ][ i ][ "eDay" ] );
-
-		var millisecondsPerDay = 1000 * 60 * 60 * 24;
-	    var millisBetween = today.getTime( ) - two.getTime( );
-	    var days = millisBetween / millisecondsPerDay;
-	    var result = Math.floor( Math.abs( days ) );
-
-	    return result;
-	}
 }
 
 </script>
 <script src="./packages/lightbox/js/lightbox.min.js"></script>
-<!-- <p id="day"></p>
-
-<script>
-var day = window.localStorage.getItem( 'day' );
-//alert( day );
-window.localStorage.clear();
-
-$(document).ready(function() {
-	if( day != undefined || day != null ){
-		$( '#day' ).html( day );
-		//alert( "true" );
-	}
-	else{
-		day = 'ZERO';
-		$( '#day' ).html( day );
-	}
-
-	if( $( '.popup' ) !== undefined ){
-		document.getElementById( 'test' ).remove();
-    	$( '.contentBody').removeAttr("style");
-	}
-
-});
-</script> -->

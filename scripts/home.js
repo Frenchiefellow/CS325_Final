@@ -22,9 +22,8 @@ $(document).ready(function() {
 
 function loadNew( Eid, pageName ){
 	var ID = '#' + String( Eid );
-	//alert( ID );
 	var name = String( pageName ) + ".html";
-	//alert( name );
+
   var path;
   if( pageName !== "forumsList")
 	 path = './ContentPages/';
@@ -43,6 +42,7 @@ function loadNew( Eid, pageName ){
 function loadFake( Eid, pageName ){
 	var ID = '#' + String( Eid );
 	var name = String( pageName ) + ".html";
+
   var path;
   if( pageName !== 'events' )
 	 path = './ContentPages/FakeData/';
@@ -124,14 +124,11 @@ function popUp( day ){
 function loadBread( name, args ){
    $( '.breadSpacer' ).html( );
   if( args !== null ){
-   // alert("true");
     var subName = String( args ).toLowerCase( );
-    //alert( subName );
     
     html = "> " + "<a id='loaf' style='text-decoration: none; color: black; cursor: pointer;'";
     var funct ='onclick="loadNew( \'' + subName + '\' , \'' +  (subName + "List" ) + '\' )" style="cursor: pointer;"';
     html += funct + "> " + args + "</a> > " + name; 
-    //alert( html );
   }
   else{
      html = "> "  + name;

@@ -17,6 +17,8 @@
   	</div>
   	<div style="height: 10%; border-bottom: 1px solid black;"></div>
 </div>
+
+
 <div class="contentContainer" style="height: 85%; width: 100%; position: relative; overflow: auto">
 	<div id="bar"></div>
 	<div class="content" id='content'></div>
@@ -30,7 +32,7 @@ $(document).ready(function() {
 	$( '.lightbox').remove();
 	$( '.lightboxOverlay').remove();
 	$( '#bar' ).load( './partials/housingSideBar.html' );
-	$( '#sbar' ).load( './partials/searchBar.html' );
+
 
 	var jsonData;
 	$.ajax({
@@ -62,7 +64,9 @@ function loadResults( JSONs ){
 		html += '<h5><strong> Bedrooms: </strong>' +  JSONs[ "Results" ][ i ][ "beds" ] + '</h5>';
 		html += '<h5><strong> Bathrooms: </strong>' +  JSONs[ "Results" ][ i ][ "bath" ] + '</h5>';
 		html += '<h5><strong> Sq. Ft.: </strong>' +  JSONs[ "Results" ][ i ][ "feet" ] + 'ft<sup>2</sup></h5>';
+
 		var diff = dateDiff( JSONs, i );
+		
 		html += '<h5><strong> Date Posted: </strong>' +  JSONs[ "Results" ][ i ][ "date" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
 		html += '</div></div></div>';
 	}
