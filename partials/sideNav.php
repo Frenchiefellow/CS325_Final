@@ -20,3 +20,16 @@
       </ul>
     </div>
 </div>
+
+<script>
+
+$(document).ready( function( ){
+if( window.localStorage.getItem( 'username' ) !== null ){
+    $('#login').html('<a onclick=\'loadNew( this.parentNode.id  , "login" ) \'>Login/SignUp</a>')
+}
+else{
+     $('#login').html('<br>');
+}
+});
+
+</script>

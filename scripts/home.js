@@ -18,6 +18,14 @@ $(document).ready(function() {
   	 	$( '#expText' ).html(" &#8593; Click to Expand Menu &#8593;");
   	 }
   } );
+
+
+  if( window.localStorage.getItem( 'username' ) === null ){
+       $('#login').html('<a onclick=\'loadNew( this.parentNode.id  , "login" ) \'>Login/SignUp</a>')
+  }
+  else{
+       $('#login').html('<br>');
+  }
 });
 
 function loadNew( Eid, pageName ){

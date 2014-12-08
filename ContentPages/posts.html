@@ -24,11 +24,9 @@
 
 <script>
 $(document).ready( function() {
+var name = window.localStorage.getItem( 'username' );
 
-	if( document.cookie.indexOf( 'username' ) > -1 ){
-		var cookie = document.cookie;
-		var split = document.cookie.split( '=' );
-		var name = split[ 1 ];
+	if( name !== null ){
 		$( '#ttl' ).text(" My Posts: " + name );
 
 		loadBread( 'Posts', null );
@@ -56,6 +54,13 @@ $(document).ready( function() {
 	else{
 		window.localStorage.setItem('page', './contentPages/posts.html');
 		$('.contentContainer').load( './partials/login.html' );
+	}
+
+	if( window.localStorage.getItem( 'username' ) === null ){
+   		 $('#login').html('<a onclick=\'loadNew( this.parentNode.id  , "login" ) \'>Login/SignUp</a>')
+	}
+	else{
+	     $('#login').html('<br>');
 	}
 
 	function loadResults( JSONs ){

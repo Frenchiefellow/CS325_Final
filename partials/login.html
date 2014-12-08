@@ -43,7 +43,8 @@ if( page === null || page === undefined )
 window.localStorage.clear();
 
 $( '.btn-primary' ).click( function( ) {
-	document.cookie = 'username=' + $( '#logUser' ).val();
+	var name =  $( '#logUser' ).val();
+	window.localStorage.setItem( 'username',  name );
 	if( page === 'home.php')
 		window.location.replace( page );
 	else{
@@ -52,9 +53,12 @@ $( '.btn-primary' ).click( function( ) {
 });
 
 $( '.btn-success' ).click( function( ) {
-	document.cookie = 'username=' + $( '#sUser' ).val();
+	var name =  $( '#logUser' ).val();
+	window.localStorage.setItem( 'username',  name );
 	window.location.replace( page );
 });
+
+
 
 
 </script>
