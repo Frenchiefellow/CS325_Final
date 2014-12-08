@@ -2,7 +2,7 @@
 CS325_Final 
 =========== 
 <P>Craigslist Rework for CS325 - Fall 2014.
-Temporarily Hosted: http://cs325final.comlu.net 
+Temporarily Hosted: http://cs325final.comlu.com 
 </P>
 <H1>Description 
 </H1>
