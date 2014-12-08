@@ -6,7 +6,7 @@
         <li><br></li>
         <li id="cat"><a onclick='loadNew( this.parentNode.id  , "categories" )' >My Categories</a></li>
         <li id="posts"><a onclick='loadNew( this.parentNode.id  , "posts" )'>My Posts</a></li>
-        <li id="searchPage"><a href="search.php">Search</a></li>
+        <li id="login"><a onclick='loadNew( this.parentNode.id  , "login" )'>Login/SignUp</a></li>
         <li><br></li>
         <li id="housing"><a onclick='loadNew( this.parentNode.id  , "FakeData/housingResults" )'>Housing</a></li>
         <li id="jobs"><a onclick='loadNew( this.parentNode.id  , "jobs" )'>Jobs</a></li>

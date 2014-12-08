@@ -1,0 +1,60 @@
+<div class="login">
+	<div class="logHead">
+		<span id="ttl2">Login to View Your Content!</span>
+	</div>
+	<div class="col-md-6" style="border-right: 1px solid black; height: 90%; margin: 0 auto;">
+		<div style="height: 15%"></div>
+		<form class="credentials">
+			<div style = "height: 5%"></div>
+			<label style='text-align: center; width: 100%;'>Log in: </label><br>
+			<div style = "height: 5%"></div>
+			<div style="width: 100%; margin: auto; text-align: center">
+				Username*: <input type='text' id="logUser" placeholder="Username" required="required" name="logUser"><br><br>
+				Password* :	<input type='password' id="logPass" placeholder="Password" required="required" name="logPass"><br>
+			</div>
+			<div style="font-size: small; text-align: center;  width: 100%;">* denotes required field. </div><br>
+			<input type='button' class='btn btn-primary' value="Login!">
+		</form>
+		<div style="height: 25%"></div>
+	</div>
+	<div class="col-md-6" style="height: 90%; margin: 0 auto;">
+		<div style="height: 15%"></div>
+		<form class="credentials2">
+			<div style = "height: 5%"></div>
+			<label style='text-align: center; width: 100%;'>Sign Up: </label><br>
+			<div style = "height: 5%"></div>
+			<div style="width: 100%; margin: auto; text-align: center">
+				Email Add* :   <input type='email' id="sEmail" placeholder="Email" required="required" name="sUser"><br><br>
+				Username*: <input type='text' id="sUser" placeholder="Username" required="required" name="sUser"><br><br>
+				Password* :	<input type='password' id="sPass" placeholder="Password" required="required" name="SEmail"><br>
+			</div>
+			<div style="font-size: small; text-align: center;  width: 100%;">* denotes required field. </div>
+			<input type='button' class='btn btn-success' value="Sign-Up!">
+		</form>
+		<div style="height: 25%"></div>
+	</div>
+</div>
+
+<script>
+var page = window.localStorage.getItem( 'page' );
+if( page === null || page === undefined )
+	page = 'home.php';
+
+window.localStorage.clear();
+
+$( '.btn-primary' ).click( function( ) {
+	document.cookie = 'username=' + $( '#logUser' ).val();
+	if( page === 'home.php')
+		window.location.replace( page );
+	else{
+		$( '.contentBody' ).load( page );
+	}
+});
+
+$( '.btn-success' ).click( function( ) {
+	document.cookie = 'username=' + $( '#sUser' ).val();
+	window.location.replace( page );
+});
+
+
+</script>

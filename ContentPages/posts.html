@@ -1,1 +1,93 @@
-<p style="position: absolute; margin: 0 auto;"> posts </p>  
+<link rel="stylesheet" href="./CSS/housing.css" >
+<link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl">My Posts</span><span id="name"></span>
+		<div style="height: 5%"></div>
+	</div>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
+		<form id="search" method="GET" action="search.php">
+			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
+  		</form>
+  	</div>
+  	<div style="height: 10%"></div>
+</div>
+
+<div class="contentContainer" style="height: 85%; width: 100%; position: relative; overflow: auto; border-top: 1px solid black;">
+<div id="bar"></div>
+	<div class="content" id='content'></div>
+
+</div>
+
+<script>
+$(document).ready( function() {
+
+	if( document.cookie.indexOf( 'username' ) > -1 ){
+		var cookie = document.cookie;
+		var split = document.cookie.split( '=' );
+		var name = split[ 1 ];
+		$( '#ttl' ).text(" My Posts: " + name );
+
+		loadBread( 'Posts', null );
+		$( '.lightbox').remove();
+		$( '.lightboxOverlay').remove();
+		$( '#bar' ).load( './partials/forumsSideBar.html' );
+
+
+		var jsonData;
+		$.ajax({
+			type : "GET",
+	        url: "./ContentPages/FakeData/JSONS/posts.json",
+	        dataType:"json",
+	        contentType:"application/json",
+	        error: function( e ){
+	        	alert( "Error Loading Results." );
+	        },
+	        success: function(response) {
+	            jsonData = response;
+	            console.dir( jsonData );
+	            loadResults( jsonData );
+	        }
+	    });
+	}
+	else{
+		window.localStorage.setItem('page', './contentPages/posts.html');
+		$('.contentContainer').load( './partials/login.html' );
+	}
+
+	function loadResults( JSONs ){
+	var html = "";
+	for( var i = 0; i < JSONs[ "Posts" ].length; i++ ){
+		html += '<div class="result" style=""><div class="innerResult" style=""><div class="picbox">';
+		html += '<a href="' + JSONs[ "Posts" ][ i ][ 'outerImg' ] + '" data-lightbox="image-' + i + '" style="height: 100px; width: 100px;"><img class="pics" src="' + JSONs[ "Posts" ][ i ][ 'outerImg' ] + '" style="height: 100px; width: 100px;"></a>';
+		html += '<div class="price">$'  + JSONs[ "Posts" ][ i ][ 'price' ] + '</div></div>';
+		html += '<div class="infoBox">';
+		html += '<h4><strong><a>' + JSONs[ "Posts" ][ i ][ "title" ] + ' - ' + JSONs[ "Posts" ][ i ][ "location" ] + '</a></strong></h4>';
+		
+
+		var diff = dateDiff( JSONs, i );
+		
+		html += '<h5><strong> Date Posted: </strong>' +  JSONs[ "Posts" ][ i ][ "date" ] + ' &ensp; [' + diff + ' Days Ago] </h5>';
+		html += '</div></div></div>';
+	}
+	$( '#content' ).html( html );
+
+}
+
+function dateDiff( JSONs, i )
+{
+	var today = new Date( );
+	var splitter = JSONs[ "Posts" ][ i ][ "date" ].split( "/" ); 
+	var two = new Date( today.getFullYear( ), splitter[ 0 ] - 1, splitter[ 1 ] );
+
+	var millisecondsPerDay = 1000 * 60 * 60 * 24;
+    var millisBetween = two.getTime( ) - today.getTime( );
+    var days = millisBetween / millisecondsPerDay;
+    var result = Math.floor( Math.abs( days ) );
+
+    return result;
+}
+});

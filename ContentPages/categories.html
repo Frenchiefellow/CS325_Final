@@ -1,1 +1,82 @@
-<p style="position: absolute; margin: 0 auto;"> Categories </p>  
+<link rel="stylesheet" href="./CSS/housing.css" >
+<link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl">My Categories</span><span id="name"></span>
+		<div style="height: 5%"></div>
+	</div>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
+		<form id="search" method="GET" action="search.php">
+			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
+  		</form>
+  	</div>
+  	<div style="height: 10%"></div>
+</div>
+
+<div class="contentContainer" style="height: 85%; width: 100%; position: relative; overflow: auto; border-top: 1px solid black;">
+<div id="bar"></div>
+	<div class="content" id='content'></div>
+
+</div>
+
+<script>
+$(document).ready( function() {
+
+	if( document.cookie.indexOf( 'username' ) > -1 ){
+		var cookie = document.cookie;
+		var split = document.cookie.split( '=' );
+		var name = split[ 1 ];
+		$( '#ttl' ).text(" My Catergories: " + name );
+
+		loadBread( 'Categories', null );
+		$( '.lightbox').remove();
+		$( '.lightboxOverlay').remove();
+		$( '#bar' ).load( './partials/forumsSideBar.html' );
+
+
+		var jsonData;
+		$.ajax({
+			type : "GET",
+	        url: "./ContentPages/FakeData/JSONS/categories.json",
+	        dataType:"json",
+	        contentType:"application/json",
+	        error: function( e ){
+	        	alert( "Error Loading Results." );
+	        },
+	        success: function(response) {
+	            jsonData = response;
+	            console.dir( jsonData );
+	            loadResults( jsonData );
+	        }
+	    });
+
+	}
+	else{
+		window.localStorage.setItem('page', './contentPages/categories.html');
+		$('.contentContainer').load( './partials/login.html' );
+	}
+
+
+});
+
+function loadResults( JSONs ){
+	var html = '<div style="height: 5%"></div>';
+	var rows = Math.ceil( JSONs[ "Categories" ].length / 3 );
+	for( var i = 0; i <  JSONs[ "Categories" ].length; i++ ){
+		
+			html += '<div class="col-md-4" style="height: calc( 95% / 4 )">';
+			html += '<div style="width: 100%; margin: auto;">';
+			html += '<div class="catImg" style="width: 100%; margin: auto; text-align: center;">';
+			html += '<img src="./resources/images/cat.png" style="width: 100px; height: 100px;" />';
+			html += '<sup title="Press to Remove From Categories">X</sup></div>';
+			html += '<div style="text-align: center;">' + JSONs[ "Categories" ][ i ][ "name" ] + '</div></div></div>';
+
+	}
+	$( '.content' ).html( html );
+
+}
+
+</script>

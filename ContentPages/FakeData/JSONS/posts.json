@@ -1,0 +1,26 @@
+{ 
+	"Posts" : [
+		{
+			"title" : "Epiphone Les Paul Standard",
+			"location" : "Amherst",
+			"price" : "200",
+			"date" : "11/24",
+			"outerImg" : "./resources/images/money.jpg",
+			"desc" : "Cool Guitar",
+			"phone" : "Do Not Contact",
+			"email" : "fronchiefallow@!gmail.com",
+			"name"  : "Chris"
+		},
+
+		{
+			"title" : "PS3 Game",
+			"location" : "Amherst",
+			"price" : "60",
+			"date" : "8/2",
+			"outerImg" : "./resources/images/money.jpg",
+			"desc" : "Cool Guitar",
+			"phone" : "Do Not Contact",
+			"email" : "fronchiefallow@!gmail.com",
+			"name"  : "Chris"
+		}]
+}
