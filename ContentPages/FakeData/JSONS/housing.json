@@ -3,6 +3,7 @@
 		{
 			"title" : "Spacious Apartment",
 			"location" : "Amherst",
+			"state" : "MA",
 			"price" : "600",
 			"date" : "11/24",
 			"beds" : "1",
@@ -15,12 +16,14 @@
 			"desc" : "Spacious Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
 			"phone" : "5551256985",
 			"email" : "timallen@christmaswiththekranks.com",
-			"name"  : "Tim Allen"
+			"name"  : "Tim Allen",
+			"id" 	: "1"
 		},
 
 		{
 			"title" : "Apartment",
 			"location" : "Amherst",
+			"state" : "MA",
 			"price" : "450",
 			"date" : "11/17",
 			"beds" : "1",
@@ -33,12 +36,14 @@
 			"desc" : "Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
 			"phone" : "Do not contact",
 			"email" : "billbricks@christmaswiththekranks.com",
-			"name"  : "Bill Bricks"
+			"name"  : "Bill Bricks",
+			"id" 	: "2"
 		},
 
 		{
 			"title" : "New Apartment",
 			"location" : "Amherst",
+			"state" : "MA",
 			"price" : "525",
 			"date" : "12/1",
 			"beds" : "1",
@@ -51,12 +56,14 @@
 			"desc" : "New Apartment - Amherst. One Bath/One Bedroom. Read to move in.",
 			"phone" : "1234567890",
 			"email" : "joeybonzo@christmaswiththekranks.com",
-			"name"  : "Joey Bonzo"
+			"name"  : "Joey Bonzo",
+			"id" 	: "3"
 		},
 
 		{
 			"title" : "Small Apartment",
 			"location" : "Hadley",
+			"state" : "MA",
 			"price" : "600",
 			"date" : "11/24",
 			"beds" : "1",
@@ -69,12 +76,14 @@
 			"desc" : "Small Apartment - Hadley. One Bath/One Bedroom. Read to move in.",
 			"phone" : "9785550123",
 			"email" : "dyronetonk@christmaswiththekranks.com",
-			"name"  : "Dyrone Tonk"
+			"name"  : "Dyrone Tonk",
+			"id" 	: "4"
 		},
 
 		{
 			"title" : "Apartment",
 			"location" : "Northampton",
+			"state" : "MA",
 			"price" : "850",
 			"date" : "11/24",
 			"beds" : "2",
@@ -87,12 +96,14 @@
 			"desc" : "Apartment - Northampton. One Bath/One Bedroom. Read to move in.",
 			"phone" : "18005556740",
 			"email" : "dunk@christmaswiththekranks.com",
-			"name"  : "Jason Gastrow"
+			"name"  : "Jason Gastrow",
+			"id" 	: "5"
 		},
 
 		{
 			"title" : "Apartment",
 			"location" : "Sunderland",
+			"state" : "MA",
 			"price" : "200",
 			"date" : "11/27",
 			"beds" : "1",
@@ -105,6 +116,7 @@
 			"desc" : "Sunderland Apartment. One Bath/One Bedroom. Read to move in.",
 			"phone" : "Do not contact",
 			"email" : "steinfeld@christmaswiththekranks.com",
-			"name"  : "Steinfeld"
+			"name"  : "Steinfeld",
+			"id" 	: "6"
 		}]
 }

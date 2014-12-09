@@ -143,3 +143,17 @@ function loadBread( name, args ){
   }
   $( '.breadSpacer' ).html( html );
 }
+
+// loadedPost Scripts
+function grabPost( location, file, id, query){
+  var JSONs = './ContentPages/FakeData/JSONS/' + file;  
+  $( '.contentBody').load( './ContentPages/FakeData/loadedPost.html' );
+  var loc = { "location" : location };
+  var file = { "file" : JSONs };
+  var id = { "id" : id };
+  var query = { "query" : query };
+  var arr = [ loc, file, id, query ];
+  window.localStorage.setItem( 'things' , JSON.stringify( arr ) );
+      
+}
+

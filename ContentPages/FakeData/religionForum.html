@@ -69,7 +69,7 @@ function loadResults( JSONs ){
         html += '<a data-lightbox="image-' + i + '" style="height: 100px; widthL 100px;"><img class="pics" src="' + picURL + '" style="height: 100px; width: 100px;"></a>';
         html += '<div class="votes">Votes: '  + JSONs[ "Forums" ][ i ][ 'votes' ] + '</div></div>';
         html += '<div class="infoBox">';
-        html += '<h4><strong><a>' + JSONs[ "Forums" ][ i ][ "title" ] + '</a></strong></h4>';
+        html += '<h4><strong><a onclick="grabPost( \'./ContentPages/FakeData/religionForums.html\', \'forum.json\' , \' ' + JSONs[ "Forums" ][ i ][ "id" ] + '\', \'Forums\' )" >' + JSONs[ "Forums" ][ i ][ "title" ] + '</a></strong></h4>';
         html += '<h5><strong> Comments: </strong>' +  JSONs[ "Forums" ][ i ][ "comments" ] + '</h5>';
         html += '<h5><strong> Author: </strong>' +  JSONs[ "Forums" ][ i ][ "author" ] + '</h5>';
        ;

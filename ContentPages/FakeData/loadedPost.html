@@ -1,0 +1,241 @@
+<link rel="stylesheet" href="./CSS/housing.css" >
+<link href="./packages/lightbox/css/lightbox.css" rel="stylesheet" />
+
+<div class="headerContents" style="height: 15%; width: 100%; margin: 0 auto; text-align: center;">
+	<div style="height: 10%"></div>
+	<div class="title">
+		<div style="height: 5%"></div>
+		<span id="ttl"></span>
+		<div style="height: 5%"></div>
+	</div>
+	<div style="height: 10%"></div>
+	<div class="spacer" style="height: 30%;">
+		<form id="search" method="GET" action="search.php">
+			<input type="type" id="searchContent" name="search" placeholder="Search CL"><input id="subButton" type="submit" value=">">
+			<a class="btn-warning" id="favorited" role="button">&starf; Favorited!</a>
+  		</form>
+
+  	</div>
+  	<div style="height: 10%; border-bottom: 1px solid black;"></div>
+</div>
+<div class="loadContainer" style="height: 84%; width: 100%: position: relative; margin: 0 auto;">
+	<div id="postTitle" style="text-align: center; height: 10%; font-size: 200%"></div>
+	<div class="col-md-2" style="height: 90%"></div>
+	<div class="col-md-5" style="height: 90%" id="col1">
+		<div class="col-md-12" style="height: 45%">
+			<div class="col-md-9" style="height: 100%" id="mainPic"></div>
+			<div class="col-md-3" style="height: 100%">
+				<div class="col-md-12" style="height: 10%"></div>
+				<div class="col-md-12" style="height: 20%" id="pic1"></div>
+				<div class="col-md-12" style="height: 10%"></div>
+				<div class="col-md-12" style="height: 20%" id="pic2"></div>
+				<div class="col-md-12" style="height: 10%"></div>
+				<div class="col-md-12" style="height: 20%" id="pic3"></div>
+				<div class="col-md-12" style="height: 10%"></div>
+			</div>
+		</div>
+		<div class="col-md-12" style="height: 35%">
+			<br>
+			<span style="font-size: 125%; font-weight: bold;">Information:</span><br>
+			<span id="date"></span><br>
+			<span id="location"></span><br>
+			<span id="price"></span><br>
+			<span id="feet"></span><br>
+			<span id="beds"></span><br>
+			<span id="baths"></span><br>
+		</div>
+		<div class="col-md-12" style="height: 20%" id="commentsBox" >
+			<br id="spaced">
+			<span id="descHead" style="font-size: 125%; font-weight: bold;">Description:</span>
+			<p id="desc"></p>
+			<div id="commentField"></div>
+		</div>
+	</div>
+	<div class="col-md-3" style="height: 90%" id="col2">
+		<div class="col-md-12" style="height: 50%" id="gMaps"></div>
+		<div class="col-md-12" style="height: 25%">
+			<br>
+			<span id="contactHead" style="font-size: 125%; font-weight: bold;">Contact:</span><br>
+			<span id="name"></span><br>
+			<span id="phone"></span><br>
+			<span id="email"></span><br>
+		</div>
+	</div>
+	<div class="col-md-2" style="height: 90%"></div>
+	
+</div>
+<script>
+	$(document).ready( function(){
+		var data = JSON.parse( window.localStorage.getItem( 'things' ) );
+		console.dir( data );
+
+		var redirect = data[ 0 ][ "location" ].toString();
+
+		var bread = redirect.split('/');
+		var pageHead = bread[ bread.length - 1 ].split('.')[ 0 ];
+		if (pageHead === 'housingResults' )
+			pageHead = "Housing";
+		else if (pageHead === 'religionForums' )
+			pageHead = "Religion";
+		else if (pageHead === 'events')
+			pageHead = 'Events';
+		$( '#ttl').text( pageHead );
+
+
+		var readIn = data[ 1 ][ "file" ].toString();
+		var id = ( data[ 2 ][ "id"] - 1 );
+		var query = data[ 3 ][ "query" ].toString();
+		getJSON( readIn, query, id  );
+
+	});
+
+	function getJSON( url, query, id ){
+		console.log( query );
+		var jsonData;
+		$.ajax({
+			type : "GET",
+	        url: url,
+	        dataType:"json",
+	        contentType:"application/json",
+	        error: function( e ){
+	        	alert( "Error Loading Results." );
+	        },
+	        success: function(response) {
+	            jsonData = response;
+	            //console.dir( jsonData );
+	            loadResults( jsonData, query, id );
+	        }
+	    });
+	}
+
+	function loadResults( json, query, id ){
+		//console.dir( json );
+		  console.log( query );
+
+		
+		  if( query === 'Results'){
+			  var location = json[ query ][ id ][ "location" ].toString();
+			  var state = json[ query ][ id ][ "state" ].toString();
+			  var title = json[ query ][ id  ][ "title" ].toString() + ' - ' + location + "," + state;
+			  var price = json[ query ][ id ][ "price" ].toString();
+			  var date = json[ query ][ id ][ "date" ].toString();
+			  var beds = json[ query ][ id ][ "beds" ].toString();
+			  var baths = json[ query ][ id ][ "bath" ].toString();
+			  var feet = json[ query ][ id ][ "feet" ].toString();
+			  var first = json[ query ][ id ][ "outerImg" ].toString();
+			  var second = json[ query ][ id ][ "img1" ].toString();
+			  var third = json[ query ][ id ][ "img2" ].toString();
+			  var fourth = json[ query ][ id ][ "img3" ].toString();
+			  var description = json[ query ][ id ][ "desc" ].toString();
+			  var phone = json[ query ][ id ][ "phone" ].toString();
+			  var email = json[ query ][ id ][ "email" ].toString();
+			  var name = json[ query ][ id ][ "name" ].toString();
+			  var gArea;
+			  if( location === "Worldwide")
+			  	gArea = state;
+			  else
+			  	gArea = location + ',+' + state;
+
+		
+			  $( '#postTitle').text( title );
+			  $( '#mainPic' ).html( '<a href="' + first + '" data-lightbox="image-1"><img src="' + first + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic1' ).html( '<a href="' + second + '" data-lightbox="image-1"><img src="' + second + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic2' ).html( '<a href="' + third + '" data-lightbox="image-1"><img src="' + third + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic3' ).html( '<a href="' + fourth + '" data-lightbox="image-1"><img src="' + fourth + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#desc' ).text( description );
+			  $( '#date').html( '<strong>Date Posted:</strong> ' + date + " [" + dateDiff( date ) + " Days Ago]");
+			  $( '#location').html( '<strong>Location:</strong> ' + location);
+			  $( '#price').html( '<strong>Price:</strong> $' + price + '/month');
+			  $( '#feet').html( '<strong>Sq. Ft.:</strong> ' + feet + 'ft<sup>2</sup>');
+			  $( '#beds').html( '<strong>Beds:</strong> ' + beds);
+			  $( '#baths').html( '<strong>Baths:</strong> ' + baths);
+			  $( '#name').html( '<strong>Name:</strong> ' + name);
+			  $( '#phone').html( '<strong>Phone:</strong> ' + phone);
+			  $( '#email').html( '<strong>E-Mail:</strong> <a>' + email + '</a>');
+			  $( '#gMaps').html( '<iframe frameborder="0" style="border:0; margin-left: -15px; width: 100%; height: 100%;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8dXZZC4uyQSesH8Cizu9bkIqsrsqW3kk&q=' + gArea + '"></iframe>' );
+		}
+		if( query === 'Events' ){
+			  var location = json[ query ][ id ][ "location" ].toString();
+			  var state = json[ query ][ id ][ "state" ].toString();
+			  var title = json[ query ][ id  ][ "title" ].toString() + ' - ' + location + "," + state;
+			  var author = json[ query ][ id ][ "author" ].toString();
+			  var postDate = json[ query ][ id ][ "pMonth" ].toString() + "/" + json[ query ][ id ][ "pDay" ].toString();
+			  var eventDate = json[ query ][ id ][ "eMonth" ].toString() + "/" + json[ query ][ id ][ "eDay" ].toString();
+			  var img = json[ query ][ id ][ "img" ].toString();
+			  var attend = json[ query ][ id ][ "attend" ].toString();
+			  var comments = json[ query ][ id ][ "comments" ];
+			  var gArea;
+			  if( location === "Worldwide")
+			  	gArea = state;
+			  else
+			  	gArea = location + ',+' + state;
+
+			  $( '#postTitle').text( title );
+			  $( '#mainPic' ).html( '<a href="' + img + '" data-lightbox="image-1"><img src="' + img + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic1' ).html( '<a href="' + img + '" data-lightbox="image-1"><img src="' + img + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic2' ).html( '<a href="' + img + '" data-lightbox="image-1"><img src="' + img + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#pic3' ).html( '<a href="' + img + '" data-lightbox="image-1"><img src="' + img + '" style="height: 100%; width: 100%;" /></a>');
+			  $( '#date').html( '<strong>Date Posted:</strong> ' + postDate + " [" + dateDiff( postDate ) + " Days Ago]");
+			  $( '#date').html( '<strong>Event Posted:</strong> ' + eventDate + " [" + Math.abs( dateDiff( eventDate ) ) + " Days Til]");
+			  $( '#location').html( '<strong>Location:</strong> ' + location);
+			  $( '#price').html( '<strong>Attending:</strong> ' + attend);
+			  $( '#contactHead' ).text( "Created By:");
+			  $( '#name').html( '<strong>Name:</strong> ' + author);
+			  $( '#descHead').text( "Comments: " + comments);
+			  $( '#gMaps').html( '<iframe frameborder="0" style="border:0; margin-left: -15px; width: 100%; height: 100%;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8dXZZC4uyQSesH8Cizu9bkIqsrsqW3kk&q=' + gArea + '"></iframe>' );
+			  $( '#desc' ).remove( );
+			  $( '#spaced' ).remove( );
+			  $( '#descHead' ).removeAttr("style");
+			  $( '#descHead').css({"height" : "10%", "font-size" : "125%" , "font-weight" : "bold" });
+			  $( '#commentField' ).css({ "border" : "1px solid black", "overflow" : "auto", "height" : "70%"});
+			  var html = '';
+			  for( var i = 0; i < comments; i++ ){
+			  	html += "<span><strong>Coolkid" + (i + 1) + ":</strong> Very cool. Will be there</span><br>";
+			  }
+
+			  $( '#commentField' ).html( html );
+		}
+		if( query === "Forums"){
+				
+			 var title = json[ query ][ id  ][ "title" ].toString();
+			 var comments = json[ query ][ id  ][ "comments" ];
+			 var title = json[ query ][ id  ][ "title" ].toString();
+			 var description = json[ query ][ id  ][ "desc" ].toString();
+			 var date = json[ query ][ id  ][ "month" ].toString() + "/" +  json[ query ][ id  ][ "day" ].toString();
+			 var votes = json[ query ][ id  ][ "votes" ];
+			 var author = json[ query ][ id  ][ "author" ].toString();
+
+			 $( '#postTitle').text( title );
+			 $( '.col-md-2' ).toggleClass( 'col-md-3' );
+			 $( '.col-md-2').removeClass( 'col-md-2');
+			 $( '#col1').replaceWith( '<div class="col-md-6" style="height: 90%" id="col1">')
+			 $( '#col2').remove();
+			 $( '#col1').append( "<div class='col-md-12' style='height: 25%; border: 2px solid black;' id='descArea'>");
+			 $( '#descArea').append( "<div style='height: 5%;'></div><div class='col-md-12' style='height: 70%; border: 1px solid blue; border-radius: 10px;' id='innerDescArea'></div><div class='col-md-12' style='height: 20%;' id='sub'></div><div style='height: 5%;'></div>");
+			  $( '#innerDescArea').html( '<span><u><strong>Description: </strong></u><br><p>' + description + '</p>');
+			  $( '#sub' ).html( '<span><strong> Submitted by: </strong> ' + author + " <strong>on:</strong> " + date + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Votes:</strong> ' + votes +  '</span>');
+			 $( '#col1').append( "<div class='col-md-12' style='height: 5%; border: 1px solid black; border-bottom: none; border-top: none;' id='preCommentField'>");
+			 $( '#preCommentField').append( "<span><strong>Comments:</strong> " + comments + '<span><br>');
+			 $( '#col1').append( "<div class='col-md-12' style='height: 65%; border: 1px solid black; overflow: auto;' id='CommentField'>");
+			 var html = "";
+			 for( var i = 0; i < 100; i++){
+			 	html += "<span><strong>ForumPoster" + (i+1) + ": </strong>Here's my comment!<span><br>";
+			 }
+			 $( '#CommentField').append( html );
+
+		}
+	}
+
+	function dateDiff( date ){
+	var today = new Date( );
+	var splitter = date.split( "/" ); 
+	var two = new Date( today.getFullYear( ), splitter[ 0 ] - 1, splitter[ 1 ] );
+
+	var millisecondsPerDay = 1000 * 60 * 60 * 24;
+    var millisBetween = two.getTime( ) - today.getTime( );
+    var days = millisBetween / millisecondsPerDay;
+    var result = Math.floor( Math.abs( days ) );
+
+    return result;
+}
+</script>

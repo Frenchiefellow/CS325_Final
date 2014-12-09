@@ -60,7 +60,7 @@ function loadResults( JSONs ){
 		html += '<a href="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" data-lightbox="image-' + i + '" style="height: 100px; width: 100px;"><img class="pics" src="' + JSONs[ "Results" ][ i ][ 'outerImg' ] + '" style="height: 100px; width: 100px;"></a>';
 		html += '<div class="price">$'  + JSONs[ "Results" ][ i ][ 'price' ] + '/month</div></div>';
 		html += '<div class="infoBox">';
-		html += '<h4><strong><a>' + JSONs[ "Results" ][ i ][ "title" ] + ' - ' + JSONs[ "Results" ][ i ][ "location" ] + '</a></strong></h4>';
+		html += '<h4><strong><a onclick="grabPost( \'./ContentPages/FakeData/housingResults.html\', \'housing.json\' , \' ' + JSONs[ "Results" ][ i ][ "id" ] + '\', \'Results\' )" >' + JSONs[ "Results" ][ i ][ "title" ] + ' - ' + JSONs[ "Results" ][ i ][ "location" ] + '</a></strong></h4>';
 		html += '<h5><strong> Bedrooms: </strong>' +  JSONs[ "Results" ][ i ][ "beds" ] + '</h5>';
 		html += '<h5><strong> Bathrooms: </strong>' +  JSONs[ "Results" ][ i ][ "bath" ] + '</h5>';
 		html += '<h5><strong> Sq. Ft.: </strong>' +  JSONs[ "Results" ][ i ][ "feet" ] + 'ft<sup>2</sup></h5>';

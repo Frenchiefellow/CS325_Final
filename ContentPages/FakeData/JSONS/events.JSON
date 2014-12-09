@@ -3,6 +3,7 @@
 		{ 
 			"title" : "Hike Mt. SugarLoaf",
 			"location" : "Amherst",
+			"state" : "MA",
 			"comments" : "55",
 			"attend" : "37",
 			"author" : "Hike Master",
@@ -10,12 +11,14 @@
 			"pMonth" : "12",
 			"eDay" : "15",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "1"
 		},
 
 		{ 
 			"title" : "Carpool to Holyoke Mall",
 			"location" : "UMass Amherst",
+			"state" : "MA",
 			"comments" : "17",
 			"attend" : "7",
 			"author" : "Carpool Boy",
@@ -23,13 +26,15 @@
 			"pMonth" : "12",
 			"eDay" : "15",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "2"
 		},
 
 
 		{		
 			"title" : "CL Meetup Day",
 			"location" : "Boston",
+			"state" : "MA",
 			"comments" : "17000",
 			"attend" : "5381",
 			"author" : "CLAdmin_Frenchiefellow",
@@ -37,12 +42,14 @@
 			"pMonth" : "11",
 			"eDay" : "15",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "3"
 		},
 
 		{		
 			"title" : "Christmas Day Observed",
 			"location" : "Worldwide",
+			"state" : "Earth",
 			"comments" : "N/A",
 			"attend" : "N/A",
 			"author" : "CLAdmin_Frenchiefellow",
@@ -50,12 +57,15 @@
 			"pMonth" : "1",
 			"eDay" : "25",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "4"
+
 		},
 
 		{		
 			"title" : "CL Community Gift Swap",
 			"location" : "San Francisco",
+			"state" : "CA",
 			"comments" : "42058",
 			"attend" : "40216",
 			"author" : "CLAdmin_Frenchiefellow",
@@ -63,12 +73,14 @@
 			"pMonth" : "10",
 			"eDay" : "25",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "5"
 		},
 
 		{		
 			"title" : "New Years Eve Observed",
 			"location" : "Worldwide",
+			"state" : "Earth",
 			"comments" : "N/A",
 			"attend" : "N/A",
 			"author" : "CLAdmin_Frenchiefellow",
@@ -76,12 +88,14 @@
 			"pMonth" : "1",
 			"eDay" : "31",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "6"
 		},
 
 		{		
 			"title" : "New Years Day Observed",
 			"location" : "Worldwide",
+			"state" : "Earth",
 			"comments" : "N/A",
 			"attend" : "N/A",
 			"author" : "CLAdmin_Frenchiefellow",
@@ -89,6 +103,8 @@
 			"pMonth" : "1",
 			"eDay" : "31",
 			"eMonth" : "12",
-			"img" : "./resources/images/events.jpg"
+			"img" : "./resources/images/events.jpg",
+			"id" 	: "7"
+
 		}]
 }

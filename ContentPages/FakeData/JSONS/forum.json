@@ -3,63 +3,79 @@
 		{ 
 			"title" : "Christian Mega-Thread",
 			"comments" : "5520",
+			"desc" : "Post Anything Christian Here, y'all!",
 			"author" : "Judy",
 			"day" : "1",
 			"month" : "12",
-			"votes" : "7689"
+			"votes" : "7689",
+			"id" 	: "1"
+
 		},
 
 		{ 
 			"title" : "Dome of the Rock",
 			"comments" : "430",
+			"desc" : "Let's discuss the Dome of the rock!",
 			"author" : "George Lomenzo",
 			"day" : "1",
 			"month" : "12",
-			"votes" : "300"
+			"votes" : "300",
+			"id" 	: "2"
 		},
 
 
 		{		
 			"title" : "What is wrong with being in a cult?",
 			"comments" : "12",
+			"desc" : "Seriously, I don't get whats wrong with them...",
 			"author" : "Jim Jones",
 			"day" : "1",
 			"month" : "12",
-			"votes" : "7"
+			"votes" : "7",
+			"id" 	: "3"
 		},
 
 		{		
 			"title" : "Why should I go to church?",
 			"comments" : "53",
+			"desc" : "Title.",
 			"author" : "1337h4ck3r",
 			"day" : "28",
 			"month" : "11",
-			"votes" : "25"
+			"votes" : "25",
+			"id" 	: "4"
 		},
 
 		{		
 			"title" : "What is Satanism about?",
 			"comments" : "267",
+			"desc" : "Serious replies only, please. Lets keep this civil and objective.",
 			"author" : "Bunga",
 			"day" : "27",
 			"month" : "11",
-			"votes" : "411"
+			"votes" : "411",
+			"id" 	: "5"
 		},
 
 		{		
 			"title" : "Atheism is where its at!",
 			"comments" : "2",
+			"desc" : "amiright?",
 			"author" : "420BLAZEIT",
 			"day" : "27",
 			"month" : "11",
-			"votes" : "-653"
+			"votes" : "-653",
+			"id" 	: "6"
+
 		},
 		{		
 			"title" : "I hate religion! Convince me I'm wrong!",
 			"comments" : "10257",
+			"desc" : "Serious replies only, please. Lets keep this civil and objective.",
 			"author" : "Barbra Baldino",
 			"day" : "13",
 			"month" : "11",
-			"votes" : "8890"
+			"votes" : "8890",
+			"id" 	: "7"
 		}]
 }

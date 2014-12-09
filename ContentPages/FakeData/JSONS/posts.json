@@ -3,24 +3,28 @@
 		{
 			"title" : "Epiphone Les Paul Standard",
 			"location" : "Amherst",
+			"state" : "MA",
 			"price" : "200",
 			"date" : "11/24",
 			"outerImg" : "./resources/images/money.jpg",
 			"desc" : "Cool Guitar",
 			"phone" : "Do Not Contact",
 			"email" : "fronchiefallow@!gmail.com",
-			"name"  : "Chris"
+			"name"  : "Chris",
+			"id" 	: "1"
 		},
 
 		{
 			"title" : "PS3 Game",
 			"location" : "Amherst",
+			"state" : "MA",
 			"price" : "60",
 			"date" : "8/2",
 			"outerImg" : "./resources/images/money.jpg",
 			"desc" : "Cool Guitar",
 			"phone" : "Do Not Contact",
 			"email" : "fronchiefallow@!gmail.com",
-			"name"  : "Chris"
+			"name"  : "Chris",
+			"id" 	: "2"
 		}]
 }
