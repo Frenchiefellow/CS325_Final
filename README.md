@@ -2,7 +2,7 @@
 CS325_Final 
 =========== 
 <P>Craigslist Rework for CS325 - Fall 2014.
-Temporarily Hosted: http://cs325final.comlu.com 
+Hosted: http://cs325final.comlu.com (an Ad Blocker is <strong>highly recommended</strong>)
 </P>
 <H1>Description 
 </H1>
@@ -19,17 +19,19 @@ This &quot;site&quot; is meant to be a high fidelity prototype and
 will not contain most of the logic and functionality required to be
 the &quot;full&quot; Craigslist site. This project is meant to
 demonstrate how a new UI will improve the UX of the site. 
+
+That said, many links do not work and there are some very specific functional paths. 
 </P>
 <H1>Members 
 </H1>
 <UL>
-	<LI><P><STRONG>Chris (Owner of repo): Frontend</STRONG> 
+	<LI><P><STRONG>Chris (Owner of repo):</STRONG> Front-End Development, UI/UX Design
 	</P>
-	<LI><P><STRONG>Ben:</STRONG> 
+	<LI><P><STRONG>Ben:</STRONG> UI/UX Design, Documentation
 	</P>
-	<LI><P><STRONG>Tom:</STRONG> 
+	<LI><P><STRONG>Tom:</STRONG> UI/UX Design, Documentation
 	</P>
-	<LI><P><STRONG>Tyler:</STRONG> 
+	<LI><P><STRONG>Tyler:</STRONG> UI/UX Design, Documentation
 	</P>
 </UL>
 </BODY>
